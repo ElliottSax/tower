@@ -26,7 +26,26 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ServerScriptService = game:GetService("ServerScriptService")
 local GameConfig = require(ReplicatedStorage.Shared.Config.GameConfig)
+
+-- Lazy-loaded services (to avoid circular dependency at module load time)
+local DataService = nil
+local CheckpointService = nil
+
+local function getDataService()
+	if not DataService then
+		DataService = require(ServerScriptService.Services.DataService)
+	end
+	return DataService
+end
+
+local function getCheckpointService()
+	if not CheckpointService then
+		CheckpointService = require(ServerScriptService.Services.CheckpointService)
+	end
+	return CheckpointService
+end
 
 local AntiCheat = {}
 AntiCheat.__index = AntiCheat
@@ -246,8 +265,7 @@ function AntiCheat:CheckSpeed(player: Player, data: {}, currentPosition: Vector3
 	local horizontalSpeed = horizontalDistance / deltaTime
 
 	-- Account for SpeedBoost upgrade (prevents false positives)
-	local DataService = require(script.Parent.Parent.DataService)
-	local speedBoostLevel = DataService.GetUpgradeLevel(player, "SpeedBoost")
+	local speedBoostLevel = getDataService().GetUpgradeLevel(player, "SpeedBoost")
 
 	-- Base max speed + 10% per SpeedBoost level
 	-- Level 0: 100 studs/s
@@ -304,8 +322,7 @@ function AntiCheat:CheckTeleport(player: Player, data: {}, currentPosition: Vect
 
 	-- Ignore if player just respawned (position changed legitimately)
 	-- Use server-side tracking instead of client-controllable attributes
-	local CheckpointService = require(script.Parent.Parent.CheckpointService)
-	if CheckpointService.DidRecentlyRespawn(player) then
+	if getCheckpointService().DidRecentlyRespawn(player) then
 		return -- Recently respawned, teleport is legitimate
 	end
 

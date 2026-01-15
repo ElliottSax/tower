@@ -196,12 +196,10 @@ function DataService.SetupLeaderstats(player: Player, profile)
 
 	leaderstats.Parent = player
 
-	-- Listen for coin changes
-	coins.Changed:Connect(function(newValue)
-		if profile and profile.Data then
-			profile.Data.Coins = newValue
-		end
-	end)
+	-- NOTE: Removed bidirectional coin sync (leaderstats → profile) to prevent exploits.
+	-- Coins should ONLY be modified through DataService.AddCoins/RemoveCoins,
+	-- which updates both the profile AND leaderstats in a controlled manner.
+	-- This prevents exploiters from modifying their coin count via GUI manipulation.
 end
 
 -- ============================================================================

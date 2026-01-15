@@ -139,12 +139,17 @@ function Generator:LoadSectionTemplates()
 	end
 
 	-- Validate we have sections for each tier
+	local needsPlaceholders = false
 	for tier, sections in pairs(self.SectionTemplates) do
 		if #sections == 0 then
 			warn(string.format("[Generator] No sections found for %s tier!", tier))
-			self:CreatePlaceholderSections()
-			return
+			needsPlaceholders = true
 		end
+	end
+
+	-- Create placeholders for ALL empty tiers at once (not just the first one found)
+	if needsPlaceholders then
+		self:CreatePlaceholderSections()
 	end
 end
 

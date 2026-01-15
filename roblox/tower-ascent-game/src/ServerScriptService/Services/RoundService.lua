@@ -144,7 +144,8 @@ function RoundService.GenerateNewTower()
 	end
 
 	-- Generate new tower with true random seed (prevents predictability)
-	local seed = math.random(1, 2^31-1)
+	-- Using explicit value to avoid potential integer overflow on some systems
+	local seed = math.random(1, 2147483647)
 	RoundService.CurrentGenerator = Generator.new(seed, "Normal")
 	RoundService.CurrentTower = RoundService.CurrentGenerator:GenerateTower()
 
