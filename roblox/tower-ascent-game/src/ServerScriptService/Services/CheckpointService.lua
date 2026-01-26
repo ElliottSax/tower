@@ -302,12 +302,15 @@ function CheckpointService.OnCheckpointTouched(checkpoint: BasePart, hit: BasePa
 	if not checkpointData then return end
 
 	if section <= checkpointData.section then
+		-- Log backwards checkpoint attempt for debugging
+		print(string.format(
+			"[CheckpointService] %s touched old checkpoint (Current: %d, Touched: %d)",
+			player.Name,
+			checkpointData.section,
+			section
+		))
 		return -- Not a new checkpoint
 	end
-
-	-- Set debounce IMMEDIATELY with timestamp
-	-- Uses expiring cache pattern - no task.delay needed (checked on access)
-	CheckpointService.CheckpointDebounce[debounceKey] = { timestamp = tick() }
 
 	-- ANTI-CHEAT VALIDATION (BEFORE mutation!)
 	-- Validate stage progression to prevent teleport exploits
@@ -344,6 +347,11 @@ function CheckpointService.OnCheckpointTouched(checkpoint: BasePart, hit: BasePa
 			return -- Stop here - don't save checkpoint or award coins
 		end
 	end
+
+	-- Set debounce AFTER anti-cheat validation passes
+	-- This prevents rapid touches from bypassing anti-cheat detection
+	-- Uses expiring cache pattern - timestamp checked on access
+	CheckpointService.CheckpointDebounce[debounceKey] = { timestamp = tick() }
 
 	-- Update checkpoint data (only if validation passed)
 	checkpointData.section = section
