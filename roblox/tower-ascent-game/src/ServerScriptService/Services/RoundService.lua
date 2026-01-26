@@ -358,6 +358,16 @@ function RoundService.RunRound()
 			print("[RoundService] No players finished this round")
 		end
 
+		-- WEEK 13: Battle Pass XP for round played (all players)
+		local success, BattlePassService = pcall(function()
+			return require(script.Parent.Monetization.BattlePassService)
+		end)
+		if success and BattlePassService and BattlePassService.OnRoundPlayed then
+			for _, player in ipairs(Players:GetPlayers()) do
+				BattlePassService.OnRoundPlayed(player)
+			end
+		end
+
 		-- Wait before next round
 		task.wait(5)
 	end

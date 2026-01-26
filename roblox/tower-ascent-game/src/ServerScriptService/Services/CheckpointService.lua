@@ -368,6 +368,15 @@ function CheckpointService.OnCheckpointTouched(checkpoint: BasePart, hit: BasePa
 	local coinsAwarded = GameConfig.Progression.CoinsPerSection
 	CoinService.AddCoins(player, coinsAwarded, "Checkpoint")
 
+	-- WEEK 13: Battle Pass XP for section reached
+	local success, BattlePassService = pcall(function()
+		return require(script.Parent.Monetization.BattlePassService)
+	end)
+	if success and BattlePassService and BattlePassService.OnSectionReached then
+		BattlePassService.OnSectionReached(player, section)
+		BattlePassService.OnCoinsCollected(player, coinsAwarded)
+	end
+
 	-- Visual & audio feedback (Week 4) - Uses cached optional services
 	if ParticleService and ParticleService.SpawnParticle then
 		ParticleService.SpawnParticle("CheckpointReached", checkpoint.Position, player)
@@ -469,6 +478,15 @@ function CheckpointService.OnFinishLineTouched(finishLine: BasePart, hit: BasePa
 	-- Update stats
 	DataService.IncrementTowersCompleted(player)
 	DataService.UpdateHighestStage(player, GameConfig.Tower.SectionsPerTower)
+
+	-- WEEK 13: Battle Pass XP for tower completion
+	local success, BattlePassService = pcall(function()
+		return require(script.Parent.Monetization.BattlePassService)
+	end)
+	if success and BattlePassService and BattlePassService.OnTowerCompleted then
+		BattlePassService.OnTowerCompleted(player)
+		BattlePassService.OnCoinsCollected(player, completionBonus)
+	end
 
 	-- Visual & audio feedback (Week 4) - Uses cached optional services
 	if ParticleService and ParticleService.SpawnParticle then

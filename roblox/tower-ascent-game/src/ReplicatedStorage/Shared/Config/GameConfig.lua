@@ -290,29 +290,45 @@ GameConfig.Analytics = {
 -- ============================================================================
 
 GameConfig.Monetization = {
-	-- Battle Pass
-	BattlePass = {
-		Enabled = false, -- Enable in Week 12
-		CostRobux = 499,
-		TotalTiers = 50,
-		FreeRewards = true,
-	},
-
-	-- VIP
+	-- VIP (Week 12)
 	VIP = {
-		Enabled = false,
-		ProductId = 0, -- Set when created
-		CostRobux = 999,
+		Enabled = true,
+		ProductId = 0, -- PLACEHOLDER: Set after creating on Roblox
+		CostRobux = 500,
 		Benefits = {
 			DoubleCoins = true,
-			DoubleXP = true,
-			ExclusiveCosmetics = true,
 		},
 	},
 
-	-- Game Passes
+	-- Battle Pass (Week 13)
+	BattlePass = {
+		Enabled = true,
+		ProductId = 0, -- PLACEHOLDER: Set after creating on Roblox
+		CostRobux = 99,
+		TotalTiers = 50,
+		FreeRewards = true,
+		SeasonDurationDays = 30,
+	},
+
+	-- Game Passes (Week 14)
 	GamePasses = {
-		-- Will be populated in Week 12
+		ParticleEffects = { Id = 0, Price = 149 },
+		EmotePack = { Id = 0, Price = 99 },
+		DoubleXP = { Id = 0, Price = 199 },
+		CheckpointSkip = { Id = 0, Price = 79 },
+		SpeedDemon = { Id = 0, Price = 149 },
+	},
+
+	-- Developer Products (Week 14)
+	DevProducts = {
+		CoinPack_Small = { Id = 0, Price = 49, Amount = 500 },
+		CoinPack_Medium = { Id = 0, Price = 99, Amount = 1500 },
+		CoinPack_Large = { Id = 0, Price = 199, Amount = 4000 },
+		CoinPack_Mega = { Id = 0, Price = 399, Amount = 10000 },
+		XPBoost_30min = { Id = 0, Price = 29 },
+		XPBoost_1hour = { Id = 0, Price = 49 },
+		XPBoost_3hour = { Id = 0, Price = 99 },
+		RespawnSkip = { Id = 0, Price = 19 },
 	},
 }
 
