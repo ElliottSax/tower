@@ -63,14 +63,32 @@ function CoinService.AddCoins(player: Player, amount: number, source: string?): 
 		return false
 	end
 
+	-- Get DataService early to check max coins
+	local DataService = require(script.Parent.DataService)
+	local currentCoins = DataService.GetCoins(player)
+
+	-- Early return if already at max (better UX)
+	if currentCoins >= GameConfig.Progression.MaxCoins then
+		warn(string.format(
+			"[CoinService] %s already at max coins (%d)",
+			player.Name,
+			GameConfig.Progression.MaxCoins
+		))
+		return false
+	end
+
+	-- Calculate space remaining for coins
+	local spaceRemaining = GameConfig.Progression.MaxCoins - currentCoins
+
 	-- WEEK 12: Apply VIP multiplier (2x coins for VIP players)
 	-- Use pcall to safely handle VIPService in case it's not initialized
 	local success, VIPService = pcall(function()
 		return require(script.Parent.Monetization.VIPService)
 	end)
 
+	local multiplier = 1
 	if success and VIPService and VIPService.GetCoinMultiplier then
-		local multiplier = VIPService.GetCoinMultiplier(player)
+		multiplier = VIPService.GetCoinMultiplier(player)
 
 		-- SECURITY: Validate multiplier is reasonable (prevent malicious VIPService)
 		if type(multiplier) ~= "number" or multiplier ~= multiplier then
@@ -80,38 +98,23 @@ function CoinService.AddCoins(player: Player, amount: number, source: string?): 
 
 		-- Clamp multiplier to reasonable range (1x to 10x)
 		multiplier = math.clamp(multiplier, 1, 10)
-
-		if multiplier > 1 then
-			local originalAmount = amount
-			amount = math.floor(amount * multiplier)
-			print(string.format(
-				"[CoinService] VIP bonus: %s earned %d coins (base %d × %.1fx)",
-				player.Name,
-				amount,
-				originalAmount,
-				multiplier
-			))
-		end
 	end
 
-	-- Get DataService
-	local DataService = require(script.Parent.DataService)
-	local currentCoins = DataService.GetCoins(player)
+	-- Apply multiplier and clamp to space remaining
+	local baseAmount = amount
+	amount = math.floor(baseAmount * multiplier)
+	amount = math.min(amount, spaceRemaining) -- Clamp to available space
 
-	-- Check max coins and calculate actual new total
-	local newTotal = currentCoins + amount
-	if newTotal > GameConfig.Progression.MaxCoins then
-		newTotal = GameConfig.Progression.MaxCoins
-		amount = newTotal - currentCoins
-
-		if amount <= 0 then
-			warn(string.format(
-				"[CoinService] %s already at max coins (%d)",
-				player.Name,
-				GameConfig.Progression.MaxCoins
-			))
-			return false
-		end
+	-- Log VIP bonus if multiplier was applied
+	if multiplier > 1 then
+		print(string.format(
+			"[CoinService] VIP bonus: %s earned %d coins (base %d × %.1fx, clamped to space: %d)",
+			player.Name,
+			amount,
+			baseAmount,
+			multiplier,
+			spaceRemaining
+		))
 	end
 
 	-- Add coins via DataService

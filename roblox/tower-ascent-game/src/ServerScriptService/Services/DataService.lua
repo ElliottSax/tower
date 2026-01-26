@@ -226,7 +226,7 @@ function DataService.AddCoins(player: Player, amount: number): boolean
 		return false
 	end
 
-	if type(amount) ~= "number" or amount <= 0 or amount ~= amount then -- NaN check
+	if type(amount) ~= "number" or amount <= 0 or amount ~= amount or math.abs(amount) == math.huge then -- NaN and infinity check
 		warn("[DataService] Invalid amount in AddCoins:", amount)
 		return false
 	end
@@ -258,7 +258,7 @@ function DataService.RemoveCoins(player: Player, amount: number): boolean
 		return false
 	end
 
-	if type(amount) ~= "number" or amount <= 0 or amount ~= amount then -- NaN check
+	if type(amount) ~= "number" or amount <= 0 or amount ~= amount or math.abs(amount) == math.huge then -- NaN and infinity check
 		warn("[DataService] Invalid amount in RemoveCoins:", amount)
 		return false
 	end

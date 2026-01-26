@@ -154,11 +154,20 @@ function UpgradeService.PurchaseUpgrade(player: Player, upgradeName: string): (b
 	-- Visual & audio feedback (Week 4)
 	local character = player.Character
 	if character and character:FindFirstChild("HumanoidRootPart") then
-		local ParticleService = require(script.Parent.ParticleService)
-		local SoundService = require(script.Parent.SoundService)
+		-- Safe require with pcall (services may not be loaded)
+		local success1, ParticleService = pcall(function()
+			return require(script.Parent.ParticleService)
+		end)
+		if success1 and ParticleService and ParticleService.SpawnParticle then
+			ParticleService.SpawnParticle("UpgradePurchased", character.HumanoidRootPart.Position, player)
+		end
 
-		ParticleService.SpawnParticle("UpgradePurchased", character.HumanoidRootPart.Position, player)
-		SoundService.PlaySound("UpgradePurchased", character.HumanoidRootPart.Position, player)
+		local success2, SoundService = pcall(function()
+			return require(script.Parent.SoundService)
+		end)
+		if success2 and SoundService and SoundService.PlaySound then
+			SoundService.PlaySound("UpgradePurchased", character.HumanoidRootPart.Position, player)
+		end
 	end
 
 	print(string.format(

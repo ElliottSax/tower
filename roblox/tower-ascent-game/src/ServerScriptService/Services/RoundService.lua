@@ -326,7 +326,8 @@ function RoundService.RunRound()
 			RoundService.SetTimer(i)
 
 			-- Check if all players finished (early end)
-			if #RoundService.CompletionOrder >= RoundService.GetPlayerCount() and RoundService.GetPlayerCount() > 0 then
+			local playerCount = RoundService.GetPlayerCount()
+			if playerCount > 0 and #RoundService.CompletionOrder >= playerCount then
 				print("[RoundService] All players finished, ending round early")
 				break
 			end
