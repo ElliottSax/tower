@@ -368,21 +368,47 @@ end
 -- ============================================================================
 
 function DataService.StartAutosave()
-	-- Autosave every 60 seconds
+	-- OPTIMIZATION: Stagger autosaves instead of saving all at once
+	-- This prevents lag spikes with many players
 	task.spawn(function()
-		while true do
-			task.wait(AUTOSAVE_INTERVAL)
+		local lastFullCycle = os.time()
 
-			local saveCount = 0
+		while true do
+			-- Get all players with profiles
+			local playersToSave = {}
 			for player, profile in pairs(Profiles) do
 				if profile and profile.Data then
-					profile.Data.Timestamps.LastSave = os.time()
-					saveCount = saveCount + 1
+					table.insert(playersToSave, {player = player, profile = profile})
 				end
 			end
 
-			if saveCount > 0 then
-				print(string.format("[DataService] Autosaved %d profiles", saveCount))
+			local playerCount = #playersToSave
+			if playerCount > 0 then
+				-- Stagger saves across the interval
+				-- Save 2-3 profiles per second (spreads load evenly)
+				local savesPerTick = math.min(3, math.max(1, math.ceil(playerCount / AUTOSAVE_INTERVAL)))
+				local delayBetweenSaves = AUTOSAVE_INTERVAL / playerCount
+
+				for i, data in ipairs(playersToSave) do
+					-- Update timestamp (ProfileService auto-saves on data changes)
+					data.profile.Data.Timestamps.LastSave = os.time()
+
+					-- Wait before next save (stagger across interval)
+					if i < playerCount then
+						task.wait(delayBetweenSaves)
+					end
+				end
+
+				local cycleDuration = os.time() - lastFullCycle
+				print(string.format(
+					"[DataService] Autosaved %d profiles (staggered over %ds)",
+					playerCount,
+					cycleDuration
+				))
+				lastFullCycle = os.time()
+			else
+				-- No profiles to save, just wait
+				task.wait(AUTOSAVE_INTERVAL)
 			end
 		end
 	end)

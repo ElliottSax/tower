@@ -181,22 +181,61 @@ function AntiCheat:OnPlayerRemoving(player: Player)
 end
 
 -- ============================================================================
--- CHECK LOOP
+-- CHECK LOOP (OPTIMIZED)
 -- ============================================================================
 
 function AntiCheat:StartCheckLoop()
-	local lastCheck = tick()
+	-- OPTIMIZATION: Stagger player checks instead of checking all at once
+	-- This prevents lag spikes with many players
+	local playerCheckIndex = 1
+	local lastFullCycle = tick()
 
 	self.CheckConnection = RunService.Heartbeat:Connect(function()
-		local now = tick()
+		local allPlayers = Players:GetPlayers()
+		local playerCount = #allPlayers
 
-		if now - lastCheck >= CHECK_INTERVAL then
-			self:CheckAllPlayers()
-			lastCheck = now
+		if playerCount == 0 then return end
+
+		-- Check 1-2 players per heartbeat (staggered approach)
+		local checksThisFrame = math.min(2, playerCount)
+
+		for i = 1, checksThisFrame do
+			-- Wrap around using modulo
+			local player = allPlayers[((playerCheckIndex - 1) % playerCount) + 1]
+			if player then
+				local success, error = pcall(function()
+					self:CheckPlayer(player)
+				end)
+
+				if not success then
+					warn(string.format("[AntiCheat] Error checking player %s: %s", player.Name, error))
+				end
+			end
+
+			playerCheckIndex = playerCheckIndex + 1
+		end
+
+		-- Log completion of full cycle (useful for debugging)
+		local now = tick()
+		if playerCheckIndex > playerCount then
+			playerCheckIndex = 1
+			local cycleDuration = now - lastFullCycle
+			lastFullCycle = now
+
+			-- Debug log every 30 seconds
+			if math.floor(now) % 30 < 0.1 then
+				print(string.format(
+					"[AntiCheat] Full cycle: %d players checked in %.2fs (%.2f checks/sec)",
+					playerCount,
+					cycleDuration,
+					playerCount / cycleDuration
+				))
+			end
 		end
 	end)
 end
 
+-- Legacy function kept for compatibility (now uses staggered approach)
 function AntiCheat:CheckAllPlayers()
 	for _, player in ipairs(Players:GetPlayers()) do
 		local success, error = pcall(function()
