@@ -340,6 +340,56 @@ namespace MobileGameCore
         }
 
         #endregion
+
+        #region Cloud Save Integration
+
+        /// <summary>
+        /// Serialize current save data to JSON for cloud storage.
+        /// Used by CloudSaveManager.
+        /// </summary>
+        public string SerializeToJson()
+        {
+            try
+            {
+                currentSaveData.lastSaveTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                return JsonUtility.ToJson(currentSaveData, true);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[SaveSystem] Failed to serialize: {ex.Message}");
+                return "{}";
+            }
+        }
+
+        /// <summary>
+        /// Load save data from JSON string (from cloud).
+        /// Used by CloudSaveManager.
+        /// </summary>
+        public void LoadFromJson(string json)
+        {
+            try
+            {
+                currentSaveData = JsonUtility.FromJson<SaveData>(json);
+                Debug.Log("[SaveSystem] Loaded from cloud JSON");
+
+                // Save locally after loading from cloud
+                SaveGame();
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[SaveSystem] Failed to load from JSON: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Get timestamp of last save (for conflict resolution).
+        /// </summary>
+        public long GetLastSaveTimestamp()
+        {
+            return currentSaveData.lastSaveTimestamp;
+        }
+
+        #endregion
     }
 
     /// <summary>
@@ -378,6 +428,7 @@ namespace MobileGameCore
         public bool isFirstLaunch = true;
         public int totalPlayTimeSeconds = 0;
         public DateTime firstLaunchDate = DateTime.UtcNow;
+        public long lastSaveTimestamp = 0; // Unix timestamp for cloud sync
 
         // Custom data (for game-specific data without extending)
         public SerializableDictionary<string, string> customData = new SerializableDictionary<string, string>();
