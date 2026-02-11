@@ -1,9 +1,24 @@
-# Treasure Chase - Agent Guide
+# Treasure Chase - FROZEN PROJECT
+
+---
+
+## ⚠️ PROJECT FROZEN - 2026-02-11
+
+**This project has been permanently frozen. Do not resume work.**
+
+See `/mnt/e/projects/treasure-chase/FROZEN.md` for detailed explanation.
+See `/mnt/e/projects/.agent-bus/FROZEN_PROJECTS.md` for portfolio-wide context.
+
+**Reason**: BinaryFormatter RCE vulnerability, IAP security flaws, keyboard-only controls on mobile
+**Superseded By**: MobileGameCore SDK (Grade B) at `/mnt/e/projects/MobileGameCore/`
+**Recommendation**: Start new endless runner with MobileGameCore and secure architecture
+
+---
 
 ## Project Status
 
 **Last Updated**: 2026-02-10 (Session 2)
-**Status**: Week 3 Implementation (Monetization + Progression complete)
+**Status**: FROZEN (has critical security vulnerabilities and broken monetization flow)
 
 ## Current Implementation
 
