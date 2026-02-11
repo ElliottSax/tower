@@ -403,6 +403,23 @@ namespace TreasureChase.Endless
         /// </summary>
         public string GetFormattedMultiplier() => $"x{currentMultiplier:F1}";
 
+        /// <summary>
+        /// Adds coins directly (called by CoinBehavior when coins are collected)
+        /// </summary>
+        public void AddCoins(int amount)
+        {
+            if (amount <= 0) return;
+
+            int adjustedAmount = Mathf.RoundToInt(amount * currentMultiplier);
+            currentCoins += adjustedAmount;
+            currentScore += adjustedAmount;
+
+            OnCoinsChanged?.Invoke(currentCoins);
+            OnScoreChanged?.Invoke(currentScore);
+
+            Debug.Log($"Coins Added: +{adjustedAmount} (Total: {currentCoins})");
+        }
+
         #endregion
     }
 }

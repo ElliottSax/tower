@@ -52,10 +52,10 @@ namespace TreasureChase.Obstacles
             }
 
             // Find player
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController != null)
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController != null)
             {
-                player = vehicleController.transform;
+                player = playerController.transform;
             }
 
             // Ensure collider is trigger
@@ -108,54 +108,27 @@ namespace TreasureChase.Obstacles
         {
             hasHit = true;
 
-            var vehicleController = playerObject.GetComponent<VehicleController>();
-            if (vehicleController == null) return;
+            var playerController = playerObject.GetComponent<PlayerController>();
+            if (playerController == null) return;
 
-            // Check if player has invincibility or shield
-            if (vehicleController.HasInvincibility)
-            {
-                // Player is invincible, pass through
-                HandleInvincibleHit(vehicleController);
-                return;
-            }
-
-            if (vehicleController.HasShield)
+            // Check if player has shield power-up
+            if (playerController.isShielded)
             {
                 // Shield absorbs hit
-                HandleShieldHit(vehicleController);
+                HandleShieldHit(playerController);
                 return;
             }
 
-            // Normal collision - damage player
-            HandleNormalHit(vehicleController);
-        }
-
-        /// <summary>
-        /// Handles hit when player has invincibility
-        /// </summary>
-        protected virtual void HandleInvincibleHit(VehicleController vehicle)
-        {
-            Debug.Log("💫 Invincibility! Passed through obstacle");
-
-            // Show effect
-            SpawnImpactEffect();
-
-            // Destroy obstacle
-            if (destroyOnHit)
-            {
-                Destroy(gameObject, 0.1f);
-            }
+            // Normal collision - game over
+            HandleNormalHit(playerController);
         }
 
         /// <summary>
         /// Handles hit when player has shield
         /// </summary>
-        protected virtual void HandleShieldHit(VehicleController vehicle)
+        protected virtual void HandleShieldHit(PlayerController playerController)
         {
-            Debug.Log("🛡️ Shield absorbed hit!");
-
-            // Consume shield
-            vehicle.ConsumeShield();
+            Debug.Log("Shield absorbed hit!");
 
             // Visual feedback (lighter than normal hit)
             if (CameraController.Instance != null)
@@ -180,17 +153,23 @@ namespace TreasureChase.Obstacles
         }
 
         /// <summary>
-        /// Handles normal collision (no power-ups)
+        /// Handles normal collision (no power-ups) - triggers game over
         /// </summary>
-        protected virtual void HandleNormalHit(VehicleController vehicle)
+        protected virtual void HandleNormalHit(PlayerController playerController)
         {
-            Debug.Log($"💥 Obstacle Hit! Damage: {damageAmount}");
-
-            // Deal damage
-            vehicle.TakeDamage(damageAmount);
+            Debug.Log($"Obstacle Hit! Damage: {damageAmount}");
 
             // Visual feedback
             ShowImpactFeedback();
+
+            // Trigger game over via GameStateManager
+            if (GameStateManager.Instance != null)
+            {
+                GameStateManager.Instance.GameOver();
+            }
+
+            // Disable player controls
+            playerController.enabled = false;
 
             // Destroy obstacle
             if (destroyOnHit)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using TreasureChase.Endless;
 
 public class CoinBehavior : MonoBehaviour
 {

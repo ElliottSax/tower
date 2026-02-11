@@ -377,11 +377,11 @@ namespace TreasureChase.Endless
         /// </summary>
         void SpawnTutorialTreasure()
         {
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController == null) return;
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController == null) return;
 
             // Spawn treasure ahead of player
-            Vector3 spawnPos = vehicleController.transform.position + Vector3.forward * 20f;
+            Vector3 spawnPos = playerController.transform.position + Vector3.forward * 20f;
 
             // Use treasure from existing game (or spawn simple prefab)
             var treasurePrefab = Resources.Load<GameObject>("Prefabs/Treasure");
@@ -404,11 +404,11 @@ namespace TreasureChase.Endless
         /// </summary>
         void SpawnTutorialObstacle()
         {
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController == null) return;
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController == null) return;
 
             // Spawn obstacle ahead of player
-            Vector3 spawnPos = vehicleController.transform.position + Vector3.forward * 30f;
+            Vector3 spawnPos = playerController.transform.position + Vector3.forward * 30f;
 
             var obstaclePrefab = Resources.Load<GameObject>("Prefabs/Obstacle");
             if (obstaclePrefab != null)
@@ -426,10 +426,10 @@ namespace TreasureChase.Endless
         /// </summary>
         void SpawnTutorialPowerUp()
         {
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController == null) return;
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController == null) return;
 
-            Vector3 spawnPos = vehicleController.transform.position + Vector3.forward * 20f;
+            Vector3 spawnPos = playerController.transform.position + Vector3.forward * 20f;
 
             var powerUpPrefab = Resources.Load<GameObject>("Prefabs/PowerUp");
             if (powerUpPrefab != null)
@@ -444,10 +444,10 @@ namespace TreasureChase.Endless
         /// </summary>
         IEnumerator CheckObstaclePass(Transform obstacleTransform)
         {
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController == null) yield break;
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController == null) yield break;
 
-            while (vehicleController.transform.position.z < obstacleTransform.position.z)
+            while (playerController.transform.position.z < obstacleTransform.position.z)
             {
                 yield return null;
             }

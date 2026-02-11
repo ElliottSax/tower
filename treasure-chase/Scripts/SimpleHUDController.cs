@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using TreasureChase.Endless;
 
 public class SimpleHUDController : MonoBehaviour
 {
@@ -29,15 +30,15 @@ public class SimpleHUDController : MonoBehaviour
         // Get distance from DistanceTracker
         if (DistanceTracker.Instance != null)
         {
-            currentDistance = DistanceTracker.Instance.currentDistance;
+            currentDistance = DistanceTracker.Instance.CurrentDistance;
         }
 
         // Get coins from EndlessScoreManager (if exists)
         if (EndlessScoreManager.Instance != null)
         {
-            currentCoins = EndlessScoreManager.Instance.currentCoins;
-            currentScore = EndlessScoreManager.Instance.currentScore;
-            currentMultiplier = EndlessScoreManager.Instance.currentMultiplier;
+            currentCoins = EndlessScoreManager.Instance.CurrentCoins;
+            currentScore = EndlessScoreManager.Instance.CurrentScore;
+            currentMultiplier = EndlessScoreManager.Instance.CurrentMultiplier;
         }
         else
         {

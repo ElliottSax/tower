@@ -135,18 +135,18 @@ namespace TreasureChase.Endless
         /// </summary>
         void RecordFrame()
         {
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController == null) return;
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController == null) return;
 
             GhostFrame frame = new GhostFrame
             {
                 timestamp = recordTimer,
-                position = vehicleController.transform.position,
-                rotation = vehicleController.transform.rotation,
-                velocity = vehicleController.GetVelocity(),
-                laneIndex = vehicleController.GetCurrentLane(),
-                isJumping = vehicleController.IsJumping,
-                isPowerUpActive = vehicleController.HasAnyPowerUp()
+                position = playerController.transform.position,
+                rotation = playerController.transform.rotation,
+                velocity = Vector3.zero, // PlayerController does not expose velocity
+                laneIndex = 1, // Default center lane
+                isJumping = false,
+                isPowerUpActive = playerController.isShielded
             };
 
             currentRecording.frames.Add(frame);

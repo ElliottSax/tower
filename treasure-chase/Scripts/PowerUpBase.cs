@@ -57,8 +57,10 @@ public abstract class PowerUpBase : MonoBehaviour
         remainingTime = duration;
 
         // Hide visual
-        GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<Collider>().enabled = false;
+        var meshRenderer = GetComponent<MeshRenderer>();
+        if (meshRenderer != null) meshRenderer.enabled = false;
+        var collider = GetComponent<Collider>();
+        if (collider != null) collider.enabled = false;
 
         // Override in subclass
         OnActivate();

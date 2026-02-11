@@ -127,6 +127,7 @@ public class AchievementSystem : MonoBehaviour
 public class SaveSystem : MonoBehaviour
 {
     private Dictionary<string, int> intData = new Dictionary<string, int>();
+    private Dictionary<string, float> floatData = new Dictionary<string, float>();
     private Dictionary<string, string> stringData = new Dictionary<string, string>();
 
     public void SetInt(string key, int value)
@@ -140,6 +141,19 @@ public class SaveSystem : MonoBehaviour
         if (intData.ContainsKey(key))
             return intData[key];
         return PlayerPrefs.GetInt(key, defaultValue);
+    }
+
+    public void SetFloat(string key, float value)
+    {
+        floatData[key] = value;
+        PlayerPrefs.SetFloat(key, value);
+    }
+
+    public float GetFloat(string key, float defaultValue = 0f)
+    {
+        if (floatData.ContainsKey(key))
+            return floatData[key];
+        return PlayerPrefs.GetFloat(key, defaultValue);
     }
 
     public void SetString(string key, string value)

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TreasureChase.Obstacles;
 
 namespace TreasureChase.Endless
 {
@@ -30,11 +31,8 @@ namespace TreasureChase.Endless
         [Tooltip("Reference to obstacle spawner for populating chunks")]
         public ObstacleSpawner obstacleSpawner;
 
-        [Tooltip("Reference to treasure spawner for populating chunks")]
-        public TreasureSpawner treasureSpawner;
-
-        [Tooltip("Reference to power-up spawner for populating chunks")]
-        public PowerUpSpawner powerUpSpawner;
+        [Tooltip("Reference to coin spawner for populating chunks")]
+        public CoinSpawner coinSpawner;
 
         [Header("World Theme")]
         public WorldTheme currentTheme;
@@ -64,15 +62,15 @@ namespace TreasureChase.Endless
 
         void Start()
         {
-            // Find player vehicle
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController != null)
+            // Find player - try PlayerController first, then VehicleController
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController != null)
             {
-                player = vehicleController.transform;
+                player = playerController.transform;
             }
             else
             {
-                Debug.LogError("InfiniteTerrainManager: No VehicleController found in scene!");
+                Debug.LogError("InfiniteTerrainManager: No PlayerController found in scene!");
                 return;
             }
 
@@ -180,22 +178,16 @@ namespace TreasureChase.Endless
         {
             Vector3 chunkPosition = chunk.transform.position;
 
-            // Spawn treasures (if spawner exists)
-            if (treasureSpawner != null)
-            {
-                treasureSpawner.SpawnInChunk(chunk, chunkPosition, chunkLength);
-            }
-
             // Spawn obstacles (if spawner exists)
             if (obstacleSpawner != null)
             {
                 obstacleSpawner.SpawnInChunk(chunk, chunkPosition, chunkLength);
             }
 
-            // Spawn power-ups (if spawner exists)
-            if (powerUpSpawner != null)
+            // Spawn coins (if spawner exists)
+            if (coinSpawner != null)
             {
-                powerUpSpawner.SpawnInChunk(chunk, chunkPosition, chunkLength);
+                coinSpawner.SpawnCoinsForChunk(chunk, chunkPosition.z, chunkLength);
             }
 
             // Apply world theme if set
@@ -265,6 +257,23 @@ namespace TreasureChase.Endless
             }
 
             Debug.Log($"InfiniteTerrainManager: Theme changed to {theme.themeName}");
+        }
+
+        /// <summary>
+        /// Sets current theme (called by WorldManager during transition start)
+        /// </summary>
+        public void SetCurrentTheme(WorldTheme theme)
+        {
+            SetTheme(theme);
+        }
+
+        /// <summary>
+        /// Called when theme change is applied (called by WorldManager after transition midpoint)
+        /// </summary>
+        public void OnThemeChanged(WorldTheme theme)
+        {
+            // Re-apply theme to ensure all chunks are updated
+            SetTheme(theme);
         }
 
         /// <summary>

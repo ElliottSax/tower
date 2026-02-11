@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using TreasureChase.Endless;
 
 public class GameOverController : MonoBehaviour
 {
@@ -60,14 +61,14 @@ public class GameOverController : MonoBehaviour
         // Get distance
         if (DistanceTracker.Instance != null)
         {
-            finalDistance = DistanceTracker.Instance.currentDistance;
+            finalDistance = DistanceTracker.Instance.CurrentDistance;
         }
 
         // Get score and coins
         if (EndlessScoreManager.Instance != null)
         {
-            finalScore = EndlessScoreManager.Instance.currentScore;
-            finalCoins = EndlessScoreManager.Instance.currentCoins;
+            finalScore = EndlessScoreManager.Instance.CurrentScore;
+            finalCoins = EndlessScoreManager.Instance.CurrentCoins;
         }
         else if (FindObjectOfType<SimpleHUDController>() != null)
         {

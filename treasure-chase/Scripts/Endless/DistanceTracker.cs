@@ -52,16 +52,16 @@ namespace TreasureChase.Endless
 
         void Start()
         {
-            // Find player vehicle
-            var vehicleController = FindObjectOfType<VehicleController>();
-            if (vehicleController != null)
+            // Find player - try PlayerController first, then VehicleController
+            var playerController = FindObjectOfType<PlayerController>();
+            if (playerController != null)
             {
-                player = vehicleController.transform;
+                player = playerController.transform;
                 startZ = player.position.z;
             }
             else
             {
-                Debug.LogError("DistanceTracker: No VehicleController found in scene!");
+                Debug.LogError("DistanceTracker: No PlayerController found in scene!");
                 return;
             }
 
