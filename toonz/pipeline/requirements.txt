@@ -1,0 +1,12 @@
+# Core dependencies
+Pillow>=9.0.0
+
+# Optional: For MoviePy-based video rendering
+# moviepy>=1.0.0
+
+# Optional: For advanced video processing
+# numpy>=1.20.0
+
+# External tools (install separately):
+# - Rhubarb Lip Sync: https://github.com/DanielSWolf/rhubarb-lip-sync
+# - FFmpeg: https://ffmpeg.org/

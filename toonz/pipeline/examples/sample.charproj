@@ -1,0 +1,45 @@
+{
+  "name": "explainer_video_01",
+  "version": "1.0",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 60.0,
+
+  "audio": "assets/audio/narration.wav",
+  "transcript": "assets/audio/narration.txt",
+  "background": "assets/backgrounds/office.png",
+
+  "characters": [
+    {
+      "name": "narrator",
+      "rig": "assets/characters/narrator/character.json",
+      "position": [960, 800],
+      "scale": 1.0,
+      "lipsync": true
+    }
+  ],
+
+  "scenes": [
+    {
+      "name": "intro",
+      "start": 0,
+      "end": 30,
+      "characters": ["narrator"],
+      "background": "assets/backgrounds/office.png"
+    },
+    {
+      "name": "main",
+      "start": 30,
+      "end": 60,
+      "characters": ["narrator"],
+      "background": "assets/backgrounds/whiteboard.png"
+    }
+  ],
+
+  "output": {
+    "format": "mp4",
+    "codec": "h264",
+    "quality": "high"
+  }
+}

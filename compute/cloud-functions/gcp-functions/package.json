@@ -1,0 +1,22 @@
+{
+  "name": "gcp-compute-functions",
+  "version": "1.0.0",
+  "description": "Google Cloud Functions for compute offloading",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "bash deploy.sh",
+    "deploy:hash": "gcloud functions deploy computeHash --runtime nodejs20 --trigger-http --allow-unauthenticated --entry-point computeHash --source . --region us-central1",
+    "deploy:text": "gcloud functions deploy analyzeText --runtime nodejs20 --trigger-http --allow-unauthenticated --entry-point analyzeText --source . --region us-central1",
+    "deploy:data": "gcloud functions deploy transformData --runtime nodejs20 --trigger-http --allow-unauthenticated --entry-point transformData --source . --region us-central1",
+    "deploy:heavy": "gcloud functions deploy heavyCompute --runtime nodejs20 --trigger-http --allow-unauthenticated --entry-point heavyCompute --source . --region us-central1 --memory 1GB --timeout 60s",
+    "deploy:all": "bash deploy-all.sh",
+    "test": "node test/test-all.js"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0",
+    "sharp": "^0.33.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

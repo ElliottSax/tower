@@ -1,0 +1,39 @@
+# Roblox Studio
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+
+# Rojo
+/build/
+
+# Wally
+/Packages/
+
+# Selene
+/selene.toml
+
+# Node
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test outputs
+/TestResults/
+
+# Temporary files
+*.tmp
+*.temp

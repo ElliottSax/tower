@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # Discovery workers (pattern discovery, parameter sweeps)
+  discovery-worker:
+    build:
+      context: ..
+      dockerfile: quant-discovery/Dockerfile
+    command: celery -A discovery.tasks.celery_app worker -Q discovery -c 3 --loglevel=info
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - REDIS_URL=${REDIS_URL}
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
+      - DISCOVERY_MODE=production
+      - ENABLE_ALERTS=${ENABLE_ALERTS:-true}
+    volumes:
+      - ./discovery:/app/discovery
+      - ../quant-shared:/app/quant-shared
+    depends_on:
+      - redis
+    restart: unless-stopped
+    mem_limit: 8g
+    cpus: 4
+
+  # Research workers (experimental models, heavy compute)
+  research-worker:
+    build:
+      context: ..
+      dockerfile: quant-discovery/Dockerfile
+    command: celery -A discovery.tasks.celery_app worker -Q research -c 1 --loglevel=info
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - REDIS_URL=${REDIS_URL}
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
+      - ENABLE_GPU=${ENABLE_GPU:-false}
+    volumes:
+      - ./discovery:/app/discovery
+      - ../quant-shared:/app/quant-shared
+    depends_on:
+      - redis
+    restart: unless-stopped
+    mem_limit: 16g
+    cpus: 8
+    # Uncomment for GPU support
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  # Scheduler (Celery Beat)
+  beat:
+    build:
+      context: ..
+      dockerfile: quant-discovery/Dockerfile
+    command: celery -A discovery.tasks.celery_app beat --loglevel=info
+    environment:
+      - REDIS_URL=${REDIS_URL}
+      - DATABASE_URL=${DATABASE_URL}
+    volumes:
+      - ./discovery:/app/discovery
+      - ../quant-shared:/app/quant-shared
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  # Flower (monitoring UI)
+  flower:
+    build:
+      context: ..
+      dockerfile: quant-discovery/Dockerfile
+    command: celery -A discovery.tasks.celery_app flower --port=5555
+    environment:
+      - REDIS_URL=${REDIS_URL}
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  # Redis (shared with main app if on same host)
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  redis-data:

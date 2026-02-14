@@ -1,0 +1,75 @@
+{
+	"name": "Dimension Hopper",
+	"tree": {
+		"$className": "DataModel",
+
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Shared": {
+				"$path": "src/ReplicatedStorage/Shared"
+			},
+			"Packages": {
+				"$className": "Folder",
+				"ProfileService": {
+					"$path": "Packages/ProfileService"
+				}
+			}
+		},
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"Services": {
+				"$path": "src/ServerScriptService/Services"
+			},
+			"Utilities": {
+				"$path": "src/ServerScriptService/Utilities"
+			},
+			"Main": {
+				"$path": "src/ServerScriptService/Main.server.lua"
+			}
+		},
+
+		"StarterGui": {
+			"$className": "StarterGui",
+			"$properties": {
+				"ScreenOrientation": "LandscapeSensor"
+			},
+			"UI": {
+				"$path": "src/StarterGui"
+			}
+		},
+
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$path": "src/StarterPlayer/StarterPlayerScripts"
+			}
+		},
+
+		"Workspace": {
+			"$className": "Workspace",
+			"$properties": {
+				"StreamingEnabled": true
+			}
+		},
+
+		"Lighting": {
+			"$className": "Lighting",
+			"$properties": {
+				"Ambient": [0.3, 0.3, 0.35],
+				"Brightness": 2,
+				"ClockTime": 14,
+				"GeographicLatitude": 40,
+				"GlobalShadows": true,
+				"Technology": "Future"
+			}
+		},
+
+		"SoundService": {
+			"$className": "SoundService",
+			"$properties": {
+				"RespectFilteringEnabled": true
+			}
+		}
+	}
+}

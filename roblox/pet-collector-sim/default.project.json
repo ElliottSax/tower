@@ -1,0 +1,53 @@
+{
+  "name": "PetCollectorSimulator",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+
+      "Shared": {
+        "$path": "src/ReplicatedStorage/Shared"
+      },
+
+      "Packages": {
+        "$path": "src/ReplicatedStorage/Packages"
+      }
+    },
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+
+      "Main": {
+        "$path": "src/ServerScriptService/Main.server.lua"
+      },
+
+      "Services": {
+        "$path": "src/ServerScriptService/Services"
+      },
+
+      "Security": {
+        "$path": "src/ServerScriptService/Security"
+      },
+
+      "Utilities": {
+        "$path": "src/ServerScriptService/Utilities"
+      }
+    },
+
+    "StarterGui": {
+      "$className": "StarterGui",
+      "$path": "src/StarterGui"
+    },
+
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "$path": "src/ServerStorage"
+    },
+
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$path": "src/StarterPlayer"
+    }
+  }
+}

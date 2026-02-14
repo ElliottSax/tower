@@ -1,0 +1,47 @@
+{
+  "name": "sample_character",
+  "body_layers": {
+    "body": {
+      "path": "body/idle.png",
+      "anchor": [0.5, 1.0],
+      "z_order": 0,
+      "visible": true,
+      "opacity": 1.0
+    },
+    "left_arm": {
+      "path": "body/left_arm.png",
+      "anchor": [0.8, 0.2],
+      "z_order": -1,
+      "visible": true,
+      "opacity": 1.0
+    },
+    "right_arm": {
+      "path": "body/right_arm.png",
+      "anchor": [0.2, 0.2],
+      "z_order": 1,
+      "visible": true,
+      "opacity": 1.0
+    }
+  },
+  "mouth_shapes": {
+    "A": "mouth/A.png",
+    "B": "mouth/B.png",
+    "C": "mouth/C.png",
+    "D": "mouth/D.png",
+    "E": "mouth/E.png",
+    "F": "mouth/F.png",
+    "G": "mouth/G.png",
+    "H": "mouth/H.png",
+    "X": "mouth/X.png"
+  },
+  "eye_states": {
+    "open": "eyes/open.png",
+    "half": "eyes/half.png",
+    "closed": "eyes/closed.png"
+  },
+  "mouth_offset": [0, -150],
+  "eye_offset": [0, -200],
+  "default_pose": "idle",
+  "default_mouth": "X",
+  "default_eyes": "open"
+}

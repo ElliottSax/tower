@@ -1,0 +1,106 @@
+service: compute-workers
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  memorySize: 512
+  timeout: 30
+  environment:
+    STAGE: ${self:provider.stage}
+
+  # IAM permissions
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: '*'
+
+functions:
+  # Hash computation
+  computeHash:
+    handler: handlers/hash.handler
+    description: Generate SHA-256 hash of text
+    events:
+      - http:
+          path: compute/hash
+          method: post
+          cors: true
+    environment:
+      FUNCTION_NAME: computeHash
+
+  # Text analysis
+  analyzeText:
+    handler: handlers/text-analysis.handler
+    description: Analyze text and return statistics
+    events:
+      - http:
+          path: compute/text-analysis
+          method: post
+          cors: true
+    environment:
+      FUNCTION_NAME: analyzeText
+
+  # Data transformation
+  transformData:
+    handler: handlers/data-transform.handler
+    description: Transform arrays of data
+    events:
+      - http:
+          path: compute/data-transform
+          method: post
+          cors: true
+    environment:
+      FUNCTION_NAME: transformData
+
+  # Heavy computation
+  heavyCompute:
+    handler: handlers/heavy-compute.handler
+    description: CPU-intensive calculations
+    memorySize: 1024
+    timeout: 60
+    events:
+      - http:
+          path: compute/heavy
+          method: post
+          cors: true
+    environment:
+      FUNCTION_NAME: heavyCompute
+
+  # Image processing
+  processImage:
+    handler: handlers/image-process.handler
+    description: Resize and optimize images
+    memorySize: 2048
+    timeout: 120
+    events:
+      - http:
+          path: compute/image
+          method: post
+          cors: true
+    environment:
+      FUNCTION_NAME: processImage
+
+  # Batch orchestrator
+  batchOrchestrator:
+    handler: handlers/batch.handler
+    description: Orchestrate batch processing jobs
+    events:
+      - http:
+          path: batch
+          method: post
+          cors: true
+    environment:
+      FUNCTION_NAME: batchOrchestrator
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3000

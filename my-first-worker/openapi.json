@@ -1,0 +1,54 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Cloudflare Hello World Worker",
+    "version": "1.0.0",
+    "description": "A simple, secure Cloudflare Worker that returns a 'Hello, World!' message from a Durable Object."
+  },
+  "servers": [
+    {
+      "url": "https://my-first-worker.elliottsaxton.workers.dev",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Get Hello World Greeting",
+        "description": "Retrieves the 'Hello, World!' greeting from the backend Durable Object.",
+        "operationId": "getHelloWorld",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "Hello, World!"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. The API key is missing or invalid."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key",
+        "description": "API key for authenticating requests."
+      }
+    }
+  }
+}
