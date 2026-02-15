@@ -1,0 +1,58 @@
+# Portfolio Automation Cron Jobs
+# Install with: crontab /mnt/e/projects/.cron/portfolio-crontab
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+PROJECTS=/mnt/e/projects
+
+# ===== HOURLY CHECKS =====
+
+# Check generator is running, restart if needed (every hour)
+0 * * * * /usr/bin/python3 $PROJECTS/.automation/scripts/check_and_restart.py >> $PROJECTS/.agent-logs/automation/cron-hourly.log 2>&1
+
+# Monitor API usage and costs (every hour)
+15 * * * * /usr/bin/python3 $PROJECTS/.automation/scripts/cost_monitor.py >> $PROJECTS/.agent-logs/automation/cost-monitor.log 2>&1
+
+# ===== EVERY 6 HOURS =====
+
+# Generate comprehensive status report (00:00, 06:00, 12:00, 18:00)
+0 */6 * * * /usr/bin/python3 $PROJECTS/.automation/scripts/portfolio_monitor.py --report-only >> $PROJECTS/.agent-logs/automation/reports.log 2>&1
+
+# Check and optimize book quality (02:00, 08:00, 14:00, 20:00)
+0 2,8,14,20 * * * /usr/bin/python3 $PROJECTS/.automation/scripts/quality_optimizer.py >> $PROJECTS/.agent-logs/automation/quality-optimizer.log 2>&1
+
+# ===== DAILY TASKS =====
+
+# Upload ready books to KDP (once per day at 03:00)
+0 3 * * * /usr/bin/python3 $PROJECTS/.automation/scripts/kdp_uploader.py --auto >> $PROJECTS/.agent-logs/automation/kdp-upload.log 2>&1
+
+# Generate EPUB files for completed books (04:00)
+0 4 * * * cd $PROJECTS/bookcli && .venv/bin/python batch_epub_generator.py >> $PROJECTS/.agent-logs/automation/epub-generation.log 2>&1
+
+# Clean up old logs (05:00)
+0 5 * * * find $PROJECTS/.agent-logs -name "*.log" -mtime +30 -delete
+
+# Generate daily analytics report (23:00)
+0 23 * * * /usr/bin/python3 $PROJECTS/.automation/scripts/daily_analytics.py >> $PROJECTS/.agent-logs/automation/analytics.log 2>&1
+
+# ===== WEEKLY TASKS =====
+
+# Run market research and strategic planning (Sunday at 01:00)
+0 1 * * 0 /usr/bin/python3 $PROJECTS/.automation/scripts/market_research.py >> $PROJECTS/.agent-logs/automation/market-research.log 2>&1
+
+# Optimize pricing and metadata (Sunday at 02:00)
+0 2 * * 0 /usr/bin/python3 $PROJECTS/.automation/scripts/metadata_optimizer.py >> $PROJECTS/.agent-logs/automation/metadata-optimizer.log 2>&1
+
+# Backup critical data (Sunday at 03:00)
+0 3 * * 0 /usr/bin/python3 $PROJECTS/.automation/scripts/backup_all.py >> $PROJECTS/.agent-logs/automation/backup.log 2>&1
+
+# Generate weekly revenue report (Monday at 00:00)
+0 0 * * 1 /usr/bin/python3 $PROJECTS/.automation/scripts/weekly_revenue_report.py >> $PROJECTS/.agent-logs/automation/weekly-report.log 2>&1
+
+# ===== MONTHLY TASKS =====
+
+# Comprehensive portfolio analysis (1st of month at 00:00)
+0 0 1 * * /usr/bin/python3 $PROJECTS/.automation/scripts/monthly_analysis.py >> $PROJECTS/.agent-logs/automation/monthly-analysis.log 2>&1
+
+# Rotate API keys for security (1st of month at 01:00)
+0 1 1 * * /usr/bin/python3 $PROJECTS/.automation/scripts/rotate_api_keys.py >> $PROJECTS/.agent-logs/automation/api-rotation.log 2>&1

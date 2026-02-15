@@ -1,0 +1,29 @@
+[Unit]
+Description=BookCLI 24/7 Continuous Book Generator
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=elliott
+WorkingDirectory=/mnt/e/projects/bookcli
+Environment="BOOKCLI_DAILY_BUDGET=20.0"
+Environment="BOOKCLI_MAX_BOOKS_PER_DAY=100"
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/python3 /mnt/e/projects/.automation/scripts/bookcli_continuous_generator.py
+Restart=always
+RestartSec=60
+StandardOutput=append:/mnt/e/projects/.agent-logs/automation/bookcli-generator.log
+StandardError=append:/mnt/e/projects/.agent-logs/automation/bookcli-generator-error.log
+
+# Resource limits
+MemoryLimit=4G
+CPUQuota=80%
+
+# Graceful shutdown
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target

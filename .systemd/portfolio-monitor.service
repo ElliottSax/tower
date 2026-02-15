@@ -1,0 +1,26 @@
+[Unit]
+Description=Portfolio Monitoring Service
+After=network.target
+
+[Service]
+Type=simple
+User=elliott
+WorkingDirectory=/mnt/e/projects
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/usr/bin/python3 /mnt/e/projects/.automation/scripts/portfolio_monitor.py
+Restart=always
+RestartSec=30
+StandardOutput=append:/mnt/e/projects/.agent-logs/automation/portfolio-monitor.log
+StandardError=append:/mnt/e/projects/.agent-logs/automation/portfolio-monitor-error.log
+
+# Resource limits
+MemoryLimit=1G
+CPUQuota=20%
+
+# Graceful shutdown
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target
