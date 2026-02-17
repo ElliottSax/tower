@@ -1,0 +1,39 @@
+{
+	"name": "Escape-The-Factory",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Shared": {
+				"$path": "src/ReplicatedStorage/Shared"
+			}
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"Main": {
+				"$path": "src/ServerScriptService/Main.server.lua"
+			},
+			"Services": {
+				"$path": "src/ServerScriptService/Services"
+			},
+			"Security": {
+				"$path": "src/ServerScriptService/Security"
+			},
+			"Utilities": {
+				"$path": "src/ServerScriptService/Utilities"
+			}
+		},
+		"StarterGui": {
+			"$className": "StarterGui",
+			"FactoryUI": {
+				"$path": "src/StarterGui/FactoryUI.lua"
+			}
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts"
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"name": "Grow-a-World",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Shared": {
+				"$path": "src/ReplicatedStorage/Shared"
+			}
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"Main": {
+				"$path": "src/ServerScriptService/Main.server.lua"
+			},
+			"Services": {
+				"$path": "src/ServerScriptService/Services"
+			},
+			"Security": {
+				"$path": "src/ServerScriptService/Security"
+			},
+			"Utilities": {
+				"$path": "src/ServerScriptService/Utilities"
+			}
+		},
+		"StarterGui": {
+			"$className": "StarterGui",
+			"GardenUI": {
+				"$path": "src/StarterGui/GardenUI.lua"
+			},
+			"SeedShopUI": {
+				"$path": "src/StarterGui/SeedShopUI.lua"
+			},
+			"BiomeUI": {
+				"$path": "src/StarterGui/BiomeUI.lua"
+			},
+			"TradingUI": {
+				"$path": "src/StarterGui/TradingUI.lua"
+			},
+			"PrestigeUI": {
+				"$path": "src/StarterGui/PrestigeUI.lua"
+			},
+			"ShopUI": {
+				"$path": "src/StarterGui/ShopUI.lua"
+			},
+			"LeaderboardUI": {
+				"$path": "src/StarterGui/LeaderboardUI.lua"
+			},
+			"DailyRewardUI": {
+				"$path": "src/StarterGui/DailyRewardUI.lua"
+			}
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"SoundHandler": {
+					"$path": "src/StarterPlayerScripts/SoundHandler.lua"
+				}
+			}
+		}
+	}
+}

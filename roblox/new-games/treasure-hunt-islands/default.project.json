@@ -1,0 +1,10 @@
+{
+	"name": "Treasure-Hunt-Islands",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": { "$className": "ReplicatedStorage", "Shared": { "$path": "src/ReplicatedStorage/Shared" } },
+		"ServerScriptService": { "$className": "ServerScriptService", "Main": { "$path": "src/ServerScriptService/Main.server.lua" }, "Services": { "$path": "src/ServerScriptService/Services" }, "Security": { "$path": "src/ServerScriptService/Security" }, "Utilities": { "$path": "src/ServerScriptService/Utilities" } },
+		"StarterGui": { "$className": "StarterGui", "TreasureUI": { "$path": "src/StarterGui/TreasureUI.lua" } },
+		"StarterPlayer": { "$className": "StarterPlayer", "StarterPlayerScripts": { "$className": "StarterPlayerScripts" } }
+	}
+}
