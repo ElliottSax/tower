@@ -125,38 +125,69 @@ function LeaderboardService.FetchLeaderboard(category, key, ascending, maxEntrie
 	-- Check cache
 	local cached = LeaderboardCache[storeName]
 	if cached and (tick() - cached.LastUpdate) < CACHE_DURATION then
-		return cached.Data
+		return cached.Data, true -- Return cached data + cache hit flag
 	end
 
 	local entries = {}
 
-	local success, err = pcall(function()
-		local store = DataStoreService:GetOrderedDataStore(storeName)
-		local pages = store:GetSortedAsync(ascending, maxEntries)
-		local currentPage = pages:GetCurrentPage()
+	-- CRITICAL FIX: Enhanced error handling with retry logic
+	local MAX_RETRIES = 2
+	local success, err
 
-		for rank, entry in ipairs(currentPage) do
-			local userId = tonumber(entry.key)
-			local playerName = "Unknown"
+	for attempt = 1, MAX_RETRIES do
+		success, err = pcall(function()
+			local store = DataStoreService:GetOrderedDataStore(storeName)
+			local pages = store:GetSortedAsync(ascending, maxEntries)
+			local currentPage = pages:GetCurrentPage()
 
-			-- Try to get player name
-			local nameSuccess, name = pcall(function()
-				return Players:GetNameFromUserIdAsync(userId)
-			end)
-			if nameSuccess then playerName = name end
+			for rank, entry in ipairs(currentPage) do
+				local userId = tonumber(entry.key)
+				if not userId then
+					warn("[LeaderboardService] Invalid userId in leaderboard:", entry.key)
+					continue
+				end
 
-			table.insert(entries, {
-				Rank = rank,
-				UserId = userId,
-				PlayerName = playerName,
-				Value = entry.value,
-			})
+				local playerName = "Player_" .. userId
+
+				-- Try to get player name (with timeout)
+				local nameSuccess, name = pcall(function()
+					return Players:GetNameFromUserIdAsync(userId)
+				end)
+				if nameSuccess and name then
+					playerName = name
+				end
+
+				table.insert(entries, {
+					Rank = rank,
+					UserId = userId,
+					PlayerName = playerName,
+					Value = entry.value,
+				})
+			end
+		end)
+
+		if success then
+			break -- Success, exit retry loop
+		else
+			warn(string.format("[LeaderboardService] Leaderboard fetch attempt %d/%d failed: %s",
+				attempt, MAX_RETRIES, tostring(err)))
+
+			if attempt < MAX_RETRIES then
+				task.wait(1) -- Wait before retry
+			end
 		end
-	end)
+	end
 
 	if not success then
-		warn("[LeaderboardService] Failed to fetch leaderboard:", err)
-		return {}
+		warn("[LeaderboardService] All leaderboard fetch attempts failed:", err)
+
+		-- CRITICAL FIX: Return cached data even if expired (graceful degradation)
+		if cached then
+			warn("[LeaderboardService] Returning stale cached data as fallback")
+			return cached.Data, false -- Stale cache
+		end
+
+		return {}, false -- Empty with failure flag
 	end
 
 	-- Cache the results
@@ -165,7 +196,7 @@ function LeaderboardService.FetchLeaderboard(category, key, ascending, maxEntrie
 		LastUpdate = tick(),
 	}
 
-	return entries
+	return entries, true -- Fresh data
 end
 
 -- ============================================================================

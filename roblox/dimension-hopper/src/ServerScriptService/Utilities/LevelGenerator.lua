@@ -18,6 +18,7 @@
 
 local CollectionService = game:GetService("CollectionService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
 local ServerScriptService = game:GetService("ServerScriptService")
 
 local GameConfig = require(ReplicatedStorage.Shared.Config.GameConfig)
@@ -25,6 +26,10 @@ local SectionBuilder = require(ServerScriptService.Utilities.SectionBuilder)
 local SectionTemplates = require(ServerScriptService.Utilities.SectionTemplates)
 
 local LevelGenerator = {}
+
+-- CRITICAL FIX: Store fragment animation connections for proper cleanup
+-- Prevents memory leak from orphaned animation threads
+local FragmentConnections = {}
 
 -- ============================================================================
 -- CONFIGURATION
@@ -258,13 +263,38 @@ function LevelGenerator.CreateFragment(dimension: string, position: Vector3, fra
 	float.Position = position
 	float.Parent = fragment
 
-	-- Animate float
-	task.spawn(function()
-		local startY = position.Y
-		local time = 0
-		while fragment.Parent do
-			time = time + task.wait()
-			float.Position = Vector3.new(position.X, startY + math.sin(time * 2) * 0.5, position.Z)
+	-- CRITICAL FIX: Use Heartbeat connection instead of task.spawn loop
+	-- Allows proper cleanup and prevents memory leaks
+	local startY = position.Y
+	local startTime = tick()
+
+	local floatConnection = RunService.Heartbeat:Connect(function()
+		-- Check if fragment still exists
+		if not fragment.Parent or not fragment:IsDescendantOf(game) then
+			floatConnection:Disconnect()
+			FragmentConnections[fragment] = nil
+			return
+		end
+
+		-- Animate floating
+		local elapsed = tick() - startTime
+		float.Position = Vector3.new(
+			position.X,
+			startY + math.sin(elapsed * 2) * 0.5,
+			position.Z
+		)
+	end)
+
+	-- Store connection for cleanup
+	FragmentConnections[fragment] = floatConnection
+
+	-- Cleanup on ancestry changed (fragment destroyed or removed from game)
+	fragment.AncestryChanged:Connect(function()
+		if not fragment:IsDescendantOf(game) then
+			if FragmentConnections[fragment] then
+				FragmentConnections[fragment]:Disconnect()
+				FragmentConnections[fragment] = nil
+			end
 		end
 	end)
 

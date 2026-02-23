@@ -107,8 +107,11 @@ function WorldService.UnlockWorld(player: Player, worldId: number)
 		return false
 	end
 
-	-- Deduct cost
-	WorldService.DataService.AddCoins(player, -worldData.UnlockCost)
+	-- CRITICAL FIX: Deduct cost using RemoveCoins instead of AddCoins with negative value
+	if not WorldService.DataService.RemoveCoins(player, worldData.UnlockCost) then
+		warn(string.format("[WorldService] Failed to deduct %d coins from %s", worldData.UnlockCost, player.Name))
+		return false
+	end
 
 	-- Unlock world
 	table.insert(playerData.UnlockedWorlds, worldId)

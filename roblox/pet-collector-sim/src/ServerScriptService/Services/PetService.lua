@@ -32,33 +32,62 @@ function PetService.Init()
 end
 
 function PetService.SetupRemotes()
+	-- CRITICAL FIX: Use SecureRemotes for rate limiting and validation
+	local SecureRemotes = require(ServerScriptService.Security.SecureRemotes)
 	local remoteEvents = ReplicatedStorage:WaitForChild("RemoteEvents")
 
-	-- Hatch egg
-	local hatchEggRemote = remoteEvents:WaitForChild("HatchEgg")
+	-- Hatch egg (rate limited, validated egg types)
+	local hatchEggRemote = SecureRemotes.CreateRemoteEvent("HatchEgg", {
+		RateLimit = {
+			MaxCalls = 20, -- Max 20 hatches per minute
+			Window = 60
+		},
+		Schema = {"string"}, -- eggType must be string
+		AllowedValues = {
+			{Values = {"Basic", "Forest", "Crystal", "Fire", "VIP", "Legendary"}}
+		}
+	})
 	hatchEggRemote.OnServerEvent:Connect(function(player, eggType)
 		PetService.HatchEgg(player, eggType)
 	end)
 
-	-- Equip pet
-	local equipPetRemote = remoteEvents:WaitForChild("EquipPet")
+	-- Equip pet (rate limited)
+	local equipPetRemote = SecureRemotes.CreateRemoteEvent("EquipPet", {
+		RateLimit = {
+			MaxCalls = 30, -- Max 30 equips per minute
+			Window = 60
+		},
+		Schema = {"string", "number"} -- petId (string), slot (number)
+	})
 	equipPetRemote.OnServerEvent:Connect(function(player, petId, slot)
 		PetService.EquipPet(player, petId, slot)
 	end)
 
-	-- Unequip pet
-	local unequipPetRemote = remoteEvents:WaitForChild("UnequipPet")
+	-- Unequip pet (rate limited)
+	local unequipPetRemote = SecureRemotes.CreateRemoteEvent("UnequipPet", {
+		RateLimit = {
+			MaxCalls = 30, -- Max 30 unequips per minute
+			Window = 60
+		},
+		Schema = {"number"} -- slot (number)
+	})
 	unequipPetRemote.OnServerEvent:Connect(function(player, slot)
 		PetService.UnequipPet(player, slot)
 	end)
 
-	-- Delete pet
-	local deletePetRemote = remoteEvents:WaitForChild("DeletePet")
+	-- Delete pet (rate limited to prevent accidental mass deletion)
+	local deletePetRemote = SecureRemotes.CreateRemoteEvent("DeletePet", {
+		RateLimit = {
+			MaxCalls = 10, -- Max 10 deletions per minute
+			Window = 60
+		},
+		Schema = {"string"} -- petInstanceId (string)
+	})
 	deletePetRemote.OnServerEvent:Connect(function(player, petInstanceId)
 		PetService.DeletePet(player, petInstanceId)
 	end)
 
-	-- Get equipped pets
+	-- Get equipped pets (RemoteFunction - no rate limit needed for reads)
 	local getEquippedPetsRemote = remoteEvents:WaitForChild("GetEquippedPets")
 	getEquippedPetsRemote.OnServerInvoke = function(player)
 		return PetService.GetEquippedPets(player)
@@ -115,8 +144,12 @@ function PetService.HatchEgg(player: Player, eggType: string)
 		return nil
 	end
 
-	-- Deduct cost
-	PetService.DataService.AddCoins(player, -eggData.Cost)
+	-- CRITICAL FIX: Deduct cost using RemoveCoins instead of AddCoins with negative value
+	-- Prevents negative coin exploit
+	if not PetService.DataService.RemoveCoins(player, eggData.Cost) then
+		warn(string.format("[PetService] Failed to deduct %d coins from %s", eggData.Cost, player.Name))
+		return nil
+	end
 
 	-- Roll for pet
 	local pet = PetService.RollPet(eggData.PetPool, player)

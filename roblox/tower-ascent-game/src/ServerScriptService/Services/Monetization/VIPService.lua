@@ -24,7 +24,8 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local VIPService = {}
-VIPService.VIPPlayers = {} -- Track VIP status: [UserId] = true/false
+VIPService.VIPPlayers = {} -- Track VIP status: [UserId] = true/false/nil(pending)
+VIPService.VIPCache = {} -- Cache VIP status: [UserId] = {IsVIP = bool, Timestamp = number}
 VIPService.PurchaseRateLimits = {} -- Track last purchase prompt: [UserId] = tick()
 VIPService.CharacterConnections = {} -- Track CharacterAdded connections to prevent leaks: [UserId] = connection
 VIPService.IsInitialized = false
@@ -147,37 +148,74 @@ function VIPService.OnPlayerJoin(player: Player)
 		return
 	end
 
-	-- Default to non-VIP immediately (prevents blocking)
-	VIPService.VIPPlayers[player.UserId] = false
-	player:SetAttribute("IsVIP", false)
+	-- SECURITY FIX: Use pending state and cache to prevent race condition
+	local userId = player.UserId
+
+	-- Set pending state (nil = checking)
+	VIPService.VIPPlayers[userId] = nil
+	player:SetAttribute("IsVIP", nil)
+	player:SetAttribute("VIPCheckPending", true)
+
+	-- Try to load from cache first
+	local cachedStatus = nil
+	local cacheAge = math.huge
+
+	if VIPService.VIPCache[userId] then
+		cachedStatus = VIPService.VIPCache[userId].IsVIP
+		cacheAge = tick() - VIPService.VIPCache[userId].Timestamp
+	end
+
+	-- Use cache if fresh (< 5 minutes)
+	if cachedStatus ~= nil and cacheAge < 300 then
+		VIPService.VIPPlayers[userId] = cachedStatus
+		player:SetAttribute("IsVIP", cachedStatus)
+		player:SetAttribute("VIPCheckPending", false)
+
+		print(string.format("[VIPService] Loaded from cache for %s: %s",
+			player.Name, tostring(cachedStatus)))
+
+		if cachedStatus then
+			VIPService.ApplyVIPBenefits(player)
+		end
+
+		return
+	end
 
 	-- Check VIP status asynchronously
 	task.spawn(function()
 		local success, isVIP = pcall(function()
-			return MarketplaceService:UserOwnsGamePassAsync(player.UserId, CONFIG.VIPGamePassId)
+			return MarketplaceService:UserOwnsGamePassAsync(userId, CONFIG.VIPGamePassId)
 		end)
 
-		if success then
-			-- Verify player is still in the game (they may have left during async call)
-			if not player or not player.Parent then return end
-
-			-- Update VIP status after marketplace responds
-			VIPService.VIPPlayers[player.UserId] = isVIP
-			player:SetAttribute("IsVIP", isVIP)
-
-			if isVIP then
-				print(string.format("[VIPService] %s confirmed as VIP", player.Name))
-				VIPService.ApplyVIPBenefits(player)
-			else
-				print(string.format("[VIPService] %s confirmed as non-VIP", player.Name))
-			end
-
-			-- Notify client of VIP status
-			VIPService.NotifyVIPStatus(player, isVIP)
-		else
-			-- Failed to check - keep default non-VIP (safe fallback)
+		if not success then
+			-- Failed to check - default to non-VIP (safe fallback)
 			warn(string.format("[VIPService] Failed to check VIP status for %s", player.Name))
+			isVIP = false
 		end
+
+		-- Verify player is still in the game (they may have left during async call)
+		if not player or not player.Parent then return end
+
+		-- Update VIP status
+		VIPService.VIPPlayers[userId] = isVIP
+		player:SetAttribute("IsVIP", isVIP)
+		player:SetAttribute("VIPCheckPending", false)
+
+		-- Cache the result
+		VIPService.VIPCache[userId] = {
+			IsVIP = isVIP,
+			Timestamp = tick()
+		}
+
+		if isVIP then
+			print(string.format("[VIPService] %s confirmed as VIP", player.Name))
+			VIPService.ApplyVIPBenefits(player)
+		else
+			print(string.format("[VIPService] %s confirmed as non-VIP", player.Name))
+		end
+
+		-- Notify client of VIP status
+		VIPService.NotifyVIPStatus(player, isVIP)
 	end)
 end
 

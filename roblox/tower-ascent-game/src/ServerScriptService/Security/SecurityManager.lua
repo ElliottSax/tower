@@ -126,6 +126,35 @@ end
 -- AUTHENTICATION & AUTHORIZATION
 -- ============================================================================
 
+--[[
+	Checks if a player has been authenticated by the security system
+	@param player Player - The player to check
+	@return boolean - True if authenticated
+]]
+function SecurityManager.IsAuthenticated(player: Player): boolean
+	if not player or not player:IsA("Player") then
+		return false
+	end
+
+	-- Check if player has valid authorization record
+	local auth = SecurityManager.Authorizations[player.UserId]
+	if not auth then
+		return false
+	end
+
+	-- Check if authorization is still valid (not expired)
+	if auth.Validated ~= true then
+		return false
+	end
+
+	-- Check if player is banned
+	if SecurityManager.IsBanned(player.UserId) then
+		return false
+	end
+
+	return true
+end
+
 function SecurityManager.AuthenticatePlayer(player: Player): boolean
 	if not player or not player:IsA("Player") then
 		return false

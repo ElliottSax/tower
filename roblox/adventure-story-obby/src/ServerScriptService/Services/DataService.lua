@@ -306,7 +306,17 @@ function DataService.AddCoins(player: Player, amount: number): boolean
 		return false
 	end
 
-	profile.Data.Coins = profile.Data.Coins + amount
+	-- CRITICAL FIX: Enforce maximum coin cap to prevent overflow exploits
+	local MAX_COINS = 1000000000 -- 1 billion coins maximum
+	local newCoins = profile.Data.Coins + amount
+
+	if newCoins > MAX_COINS then
+		warn(string.format("[DataService] Coin cap exceeded for %s: %d + %d = %d (max: %d)",
+			player.Name, profile.Data.Coins, amount, newCoins, MAX_COINS))
+		newCoins = MAX_COINS -- Cap at maximum
+	end
+
+	profile.Data.Coins = newCoins
 
 	-- Update leaderstats
 	local leaderstats = player:FindFirstChild("leaderstats")

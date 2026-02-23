@@ -88,6 +88,18 @@ function CoinService.AddCoins(player: Player, amount: number, source: string?): 
 
 	local multiplier = 1
 	if success and VIPService and VIPService.GetCoinMultiplier then
+		-- SECURITY FIX: Wait for VIP check to complete if pending
+		local vipPending = player:GetAttribute("VIPCheckPending")
+		if vipPending == true then
+			-- Wait for VIP check to complete (max 3 seconds)
+			for i = 1, 30 do
+				if player:GetAttribute("VIPCheckPending") == false then
+					break
+				end
+				task.wait(0.1)
+			end
+		end
+
 		multiplier = VIPService.GetCoinMultiplier(player)
 
 		-- SECURITY: Validate multiplier is reasonable (prevent malicious VIPService)

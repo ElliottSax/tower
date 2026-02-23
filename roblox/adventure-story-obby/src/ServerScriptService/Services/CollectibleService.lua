@@ -26,7 +26,7 @@ local QuestService = nil
 local CollectionTracking = {}
 
 -- Active collectibles
--- Format: [CollectibleInstance] = {Type = "Fragment", Id = "Fragment_W1_L2", Reward = 50}
+-- Format: [CollectibleInstance] = {Type = "Fragment", Id = "Fragment_W1_L2", Reward = 50, AnimationThread = thread}
 local ActiveCollectibles = {}
 
 -- ============================================================================
@@ -86,14 +86,16 @@ function CollectibleService.SetupCollectible(collectible: BasePart)
 	end
 
 	-- Store collectible data
-	ActiveCollectibles[collectible] = {
+	local collectibleData = {
 		Type = collectibleType,
 		Id = collectibleId,
 		Reward = typeConfig.CoinReward,
+		AnimationThread = nil, -- Will be set by AddCollectibleEffects
 	}
+	ActiveCollectibles[collectible] = collectibleData
 
 	-- Add visual effects (particle emitter)
-	CollectibleService.AddCollectibleEffects(collectible, typeConfig)
+	CollectibleService.AddCollectibleEffects(collectible, typeConfig, collectibleData)
 
 	-- Connect touch detection
 	collectible.Touched:Connect(function(hit)
@@ -103,7 +105,7 @@ function CollectibleService.SetupCollectible(collectible: BasePart)
 	print(string.format("[CollectibleService] Setup collectible: %s (%s)", collectibleId, collectibleType))
 end
 
-function CollectibleService.AddCollectibleEffects(collectible: BasePart, typeConfig: {})
+function CollectibleService.AddCollectibleEffects(collectible: BasePart, typeConfig: {}, collectibleData: {})
 	-- Add particle emitter for visual effect
 	local particle = Instance.new("ParticleEmitter")
 	particle.Name = "CollectibleParticle"
@@ -124,13 +126,29 @@ function CollectibleService.AddCollectibleEffects(collectible: BasePart, typeCon
 	rotationValue.Value = 0
 	rotationValue.Parent = collectible
 
-	task.spawn(function()
-		while collectible.Parent and collectible:IsDescendantOf(Workspace) do
+	-- CRITICAL FIX: Store animation thread for explicit cleanup (prevents memory leak)
+	local animationThread = task.spawn(function()
+		local running = true
+
+		-- Add cleanup on collectible destruction
+		collectible.AncestryChanged:Connect(function()
+			if not collectible:IsDescendantOf(game) then
+				running = false
+			end
+		end)
+
+		while running and collectible.Parent and collectible:IsDescendantOf(Workspace) do
 			rotationValue.Value = rotationValue.Value + 2
 			collectible.CFrame = collectible.CFrame * CFrame.Angles(0, math.rad(2), 0)
 			task.wait(0.03)
 		end
+
+		-- Thread cleanup
+		running = false
 	end)
+
+	-- Store thread reference for explicit cleanup
+	collectibleData.AnimationThread = animationThread
 end
 
 -- ============================================================================
@@ -206,6 +224,16 @@ function CollectibleService.CollectItem(player: Player, collectible: BasePart): 
 end
 
 function CollectibleService.RemoveCollectible(collectible: BasePart)
+	-- CRITICAL FIX: Clean up animation thread before destroying (prevents memory leak)
+	local collectibleData = ActiveCollectibles[collectible]
+	if collectibleData and collectibleData.AnimationThread then
+		task.cancel(collectibleData.AnimationThread)
+		collectibleData.AnimationThread = nil
+	end
+
+	-- Remove from active collectibles BEFORE destroying
+	ActiveCollectibles[collectible] = nil
+
 	-- Play collection effect
 	local sound = Instance.new("Sound")
 	sound.SoundId = "rbxasset://sounds/electronicpingshort.wav"
@@ -222,9 +250,6 @@ function CollectibleService.RemoveCollectible(collectible: BasePart)
 	-- Remove after delay
 	task.wait(0.5)
 	collectible:Destroy()
-
-	-- Remove from active collectibles
-	ActiveCollectibles[collectible] = nil
 end
 
 -- ============================================================================

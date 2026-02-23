@@ -152,15 +152,55 @@ end
 -- ============================================================================
 
 function WorldService.SetCheckpoint(player: Player, checkpointId: number, checkpointCFrame: CFrame)
+	-- CRITICAL FIX: Server-authoritative checkpoint validation
+	-- NEVER trust client-provided CFrame - exploiters can teleport anywhere
+
 	local checkpoint = PlayerCheckpoints[player]
 	if not checkpoint then
 		warn("[WorldService] No active level for player:", player.Name)
 		return
 	end
 
-	-- Update checkpoint
+	-- Validate checkpointId
+	if type(checkpointId) ~= "number" or checkpointId < 1 or checkpointId ~= math.floor(checkpointId) then
+		warn(string.format("[WorldService] Invalid checkpointId from %s: %s", player.Name, tostring(checkpointId)))
+		return
+	end
+
+	-- Find checkpoint part in workspace (server-authoritative)
+	local checkpointPart = workspace:FindFirstChild("Checkpoints")
+	if not checkpointPart then
+		warn("[WorldService] Checkpoints folder not found in workspace")
+		return
+	end
+
+	local checkpointObj = checkpointPart:FindFirstChild("Checkpoint_" .. tostring(checkpointId))
+	if not checkpointObj or not checkpointObj:IsA("BasePart") then
+		warn(string.format("[WorldService] Checkpoint %d not found in workspace", checkpointId))
+		return
+	end
+
+	-- Validate player is near checkpoint (anti-exploit: must be within 50 studs)
+	local character = player.Character
+	if not character then return end
+
+	local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+	if not humanoidRootPart then return end
+
+	local distance = (humanoidRootPart.Position - checkpointObj.Position).Magnitude
+	if distance > 50 then
+		warn(string.format("[WorldService] %s too far from checkpoint %d (%.1f studs)",
+			player.Name, checkpointId, distance))
+		-- Flag potential exploiter
+		if WorldService.SecurityManager then
+			WorldService.SecurityManager._FlagPlayer(player, "CheckpointTooFar_" .. tostring(checkpointId))
+		end
+		return
+	end
+
+	-- Update checkpoint using SERVER position (not client-provided CFrame)
 	checkpoint.CheckpointId = checkpointId
-	checkpoint.SpawnCFrame = checkpointCFrame
+	checkpoint.SpawnCFrame = checkpointObj.CFrame + Vector3.new(0, 3, 0) -- Spawn slightly above checkpoint
 
 	print(string.format("[WorldService] %s reached checkpoint %d", player.Name, checkpointId))
 end

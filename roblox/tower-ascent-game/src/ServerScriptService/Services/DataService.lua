@@ -347,7 +347,17 @@ function DataService.RemoveCoins(player: Player, amount: number): boolean
 		return false -- Not enough coins
 	end
 
-	profile.Data.Coins = profile.Data.Coins - amount
+	-- Calculate new value
+	local newCoins = profile.Data.Coins - amount
+
+	-- SECURITY FIX: Prevent negative underflow
+	if newCoins < 0 then
+		warn(string.format("[DataService] Coin underflow prevented for %s: %d - %d",
+			player.Name, profile.Data.Coins, amount))
+		newCoins = 0
+	end
+
+	profile.Data.Coins = newCoins
 
 	-- Update leaderstats
 	local leaderstats = player:FindFirstChild("leaderstats")

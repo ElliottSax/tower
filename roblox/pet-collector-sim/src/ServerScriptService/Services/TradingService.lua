@@ -27,6 +27,10 @@ local TradeIdCounter = 1
 -- CONSTANTS
 -- ============================================================================
 
+-- CRITICAL FIX: Trading disabled for launch (ExchangePets function incomplete)
+-- TODO: Complete ExchangePets function before enabling
+local TRADING_ENABLED = false
+
 local TRADE_TIMEOUT = 300 -- 5 minutes to accept/reject
 local MIN_PET_AGE = 60 * 60 -- 1 hour minimum before trading
 local SAME_PET_COOLDOWN = 7 * 24 * 60 * 60 -- 7 days between trading same pet
@@ -85,6 +89,22 @@ end
 
 function TradingService.InitiateTrade(player: Player, targetPlayerName: string,
 	offeredPets: table, requestedPets: table): boolean
+
+	-- CRITICAL FIX: Trading disabled until ExchangePets function is completed
+	if not TRADING_ENABLED then
+		warn("[TradingService] Trading is temporarily disabled")
+
+		-- Notify player
+		local remoteEvents = ReplicatedStorage:FindFirstChild("RemoteEvents")
+		if remoteEvents then
+			local notifyRemote = remoteEvents:FindFirstChild("ShowNotification")
+			if notifyRemote then
+				notifyRemote:FireClient(player, "Trading is temporarily disabled. Check back soon!", "Warning")
+			end
+		end
+
+		return false
+	end
 
 	if not TradingService.DataService then
 		TradingService.DataService = require(ServerScriptService.Services.DataService)

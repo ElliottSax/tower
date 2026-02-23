@@ -128,13 +128,25 @@ function SecurityManager.CheckRateLimit(player, actionName)
 end
 
 -- ============================================================================
--- SPEEDRUN TIME VALIDATION
+-- SPEEDRUN TIME VALIDATION (ENHANCED)
 -- ============================================================================
-function SecurityManager.ValidateSpeedrunTime(player, worldId, stageNum, timeSeconds)
+function SecurityManager.ValidateSpeedrunTime(player, worldId, stageNum, timeSeconds, checkpointTimes)
+	-- ENHANCED: Added checkpoint times validation for comprehensive anti-cheat
+
+	-- Basic validation
+	if type(timeSeconds) ~= "number" then
+		return false, "Invalid time type"
+	end
+
+	if timeSeconds <= 0 or timeSeconds ~= timeSeconds or timeSeconds == math.huge then
+		return false, "Invalid time value"
+	end
+
 	-- Check minimum stage time
 	if stageNum and timeSeconds < MIN_STAGE_TIME then
 		SecurityManager._FlagPlayer(player, "ImpossibleStageTime_" .. worldId .. "_" .. tostring(stageNum))
-		return false, "Time too fast for stage"
+		return false, string.format("Time too fast for stage (%.2fs < %.2fs minimum)",
+			timeSeconds, MIN_STAGE_TIME)
 	end
 
 	-- Check minimum world time
@@ -142,11 +154,45 @@ function SecurityManager.ValidateSpeedrunTime(player, worldId, stageNum, timeSec
 		local minTime = MIN_POSSIBLE_TIMES[worldId]
 		if minTime and timeSeconds < minTime then
 			SecurityManager._FlagPlayer(player, "ImpossibleWorldTime_" .. worldId)
-			return false, "Time too fast for world"
+			return false, string.format("Time too fast for world (%.2fs < %.2fs minimum)",
+				timeSeconds, minTime)
 		end
 	end
 
-	-- Check if player is flagged
+	-- ENHANCED: Validate checkpoint times are monotonically increasing
+	if checkpointTimes and type(checkpointTimes) == "table" and #checkpointTimes > 0 then
+		local lastTime = 0
+		for i, cpTime in ipairs(checkpointTimes) do
+			if type(cpTime) ~= "number" or cpTime <= lastTime then
+				SecurityManager._FlagPlayer(player, "InvalidCheckpointTimes_" .. worldId)
+				return false, "Checkpoint times not increasing"
+			end
+			lastTime = cpTime
+		end
+
+		-- Final time must match or exceed last checkpoint
+		if timeSeconds < lastTime then
+			SecurityManager._FlagPlayer(player, "CompletionBeforeLastCheckpoint")
+			return false, "Completion time less than last checkpoint"
+		end
+	end
+
+	-- ENHANCED: Check for sudden improvement (>50% faster than personal best)
+	local playerHistory = PlayerHistory[player.UserId]
+	if playerHistory and playerHistory.BestTimes and playerHistory.BestTimes[worldId] then
+		local previousBest = playerHistory.BestTimes[worldId]
+		local improvement = (previousBest - timeSeconds) / previousBest
+
+		if improvement > 0.5 and timeSeconds < 30 then
+			-- Major improvement on short time is suspicious
+			warn(string.format("[Security] Suspicious improvement for %s in %s: %.1f%% faster",
+				player.Name, worldId, improvement * 100))
+			-- Flag but don't reject (could be legitimate skill improvement)
+			SecurityManager._FlagPlayer(player, "SuddenImprovement_" .. worldId)
+		end
+	end
+
+	-- Check if player is flagged for too many violations
 	if FlaggedPlayers[player.UserId] and FlaggedPlayers[player.UserId].Count >= 5 then
 		return false, "Player flagged for suspicious activity"
 	end

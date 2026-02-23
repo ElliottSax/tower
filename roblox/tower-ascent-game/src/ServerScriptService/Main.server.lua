@@ -29,6 +29,42 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 local GameConfig = require(ReplicatedStorage.Shared.Config.GameConfig)
 
+-- ============================================================================
+-- CRITICAL SECURITY: Validate Debug Mode
+-- ============================================================================
+
+local RunService = game:GetService("RunService")
+
+local function validateDebugMode()
+	-- NEVER allow debug in published games
+	if not RunService:IsStudio() then
+		if GameConfig.Debug.Enabled then
+			warn("⚠️ CRITICAL SECURITY: DEBUG MODE ENABLED IN PRODUCTION - AUTO-DISABLING")
+			GameConfig.Debug.Enabled = false
+			GameConfig.Debug.RunTests = false
+			GameConfig.Debug.VerboseLogs = false
+
+			-- Alert to webhook if available
+			task.spawn(function()
+				local success, WebhookLogger = pcall(function()
+					return require(ServerScriptService.Utilities.WebhookLogger)
+				end)
+
+				if success and WebhookLogger then
+					WebhookLogger.LogEvent(
+						"🚨 CRITICAL SECURITY ALERT",
+						"Debug mode was enabled in production build - auto-disabled",
+						"CRITICAL",
+						{}
+					)
+				end
+			end)
+		end
+	end
+end
+
+validateDebugMode()
+
 print("[Bootstrap] GameConfig loaded")
 print(string.format("[Bootstrap] Debug Mode: %s", GameConfig.Debug.Enabled))
 print(string.format("[Bootstrap] AntiCheat: %s", GameConfig.AntiCheat.Enabled))
