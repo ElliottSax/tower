@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DealSourceAI - Proprietary Off-Market Deal Sourcing for PE Firms & Search Funds</title>
+    <meta name="description" content="AI-powered retirement signal detection finds business owners ready to sell BEFORE they list with brokers. 8-12% response rates. Off-market proprietary deals.">
+
+    <!-- Tailwind CSS CDN for quick prototype -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Navigation -->
+<nav class="bg-white shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold gradient-text">DealSourceAI</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600">How It Works</a>
+                <a href="#pricing" class="text-gray-700 hover:text-indigo-600">Pricing</a>
+                <a href="#results" class="text-gray-700 hover:text-indigo-600">Results</a>
+                <a href="#demo" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">Book Demo</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 gradient-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl font-black text-white mb-6">
+            Find Retiring Business Owners<br/>
+            <span class="text-yellow-300">Before They List With Brokers</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+            AI-powered retirement signal detection delivers proprietary deal flow to PE firms and search funds.
+            <strong class="text-white">8-12% response rates.</strong> Off-market. Exclusive.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="#demo" class="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 shadow-lg">
+                Book a 15-Min Demo
+            </a>
+            <a href="#pilot" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 shadow-lg">
+                Apply for 50% Pilot (2 Spots Left)
+            </a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-8 text-white text-sm">
+            <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                100-200 Qualified Leads/Month
+            </div>
+            <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                80%+ Contact Discovery Rate
+            </div>
+            <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                3-4x Higher Response Rates
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-12 bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-gray-500 mb-8 text-sm uppercase tracking-wide">Trusted By</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-gray-400">
+            <div>Search Funds (Stanford, HBS, Kellogg)</div>
+            <div>Lower Middle-Market PE Firms</div>
+            <div>Independent Sponsors</div>
+            <div>Serial Acquirers</div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                Traditional Deal Sourcing Is Broken
+            </h2>
+            <p class="text-xl text-gray-600">PE firms and search funds are losing deals to competitive auctions</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="text-red-500 text-4xl mb-4">❌</div>
+                <h3 class="text-xl font-semibold mb-3">Broker Deals = Auctions</h3>
+                <p class="text-gray-600">50-100 bidders drive prices 3-5x higher. You're bidding against everyone.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="text-red-500 text-4xl mb-4">⏰</div>
+                <h3 class="text-xl font-semibold mb-3">Manual Sourcing = Slow</h3>
+                <p class="text-gray-600">$100-200K/year for researchers who find 10-20 leads/month. Can't scale.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="text-red-500 text-4xl mb-4">📊</div>
+                <h3 class="text-xl font-semibold mb-3">AI Tools = Still Your Work</h3>
+                <p class="text-gray-600">Grata/Sourcescrub give you data. You still do all the research and outreach.</p>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded">
+            <p class="text-lg text-gray-800">
+                <strong>Result:</strong> 63% of search funds take 18-24 months to find a deal (Stanford 2024).
+                PE firms see less than 18% of relevant opportunities (Axial).
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Solution Section -->
+<section id="how-it-works" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                How DealSourceAI Works
+            </h2>
+            <p class="text-xl text-gray-600">Proprietary off-market deal sourcing delivered as a service</p>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-4 mb-16">
+            <div class="text-center">
+                <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center text-indigo-600 font-bold text-2xl mx-auto mb-4">1</div>
+                <h3 class="font-semibold mb-2">Scrape</h3>
+                <p class="text-sm text-gray-600">50-state business registries + marketplaces</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center text-indigo-600 font-bold text-2xl mx-auto mb-4">2</div>
+                <h3 class="font-semibold mb-2">Score</h3>
+                <p class="text-sm text-gray-600">ML retirement likelihood (age, tenure, 7+ signals)</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center text-indigo-600 font-bold text-2xl mx-auto mb-4">3</div>
+                <h3 class="font-semibold mb-2">Enrich</h3>
+                <p class="text-sm text-gray-600">5-provider waterfall finds 80%+ contact info</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center text-indigo-600 font-bold text-2xl mx-auto mb-4">4</div>
+                <h3 class="font-semibold mb-2">Outreach</h3>
+                <p class="text-sm text-gray-600">Claude AI personalization (8-12% reply rate)</p>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center text-indigo-600 font-bold text-2xl mx-auto mb-4">5</div>
+                <h3 class="font-semibold mb-2">Deliver</h3>
+                <p class="text-sm text-gray-600">You talk to interested sellers only</p>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-lg">
+            <h3 class="text-2xl font-bold mb-6 text-center">Our Unfair Advantage</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    <div>
+                        <strong>Proprietary Retirement Signals:</strong> ML model detects retirement likelihood before owners tell anyone
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    <div>
+                        <strong>Off-Market Focus:</strong> Find sellers 12-24 months before they list with brokers
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    <div>
+                        <strong>Fully Automated:</strong> We do the scraping, scoring, enrichment, AND outreach
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    <div>
+                        <strong>Proven Results:</strong> 3-4x higher response rates than traditional cold outreach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section id="results" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                Real Results from Pilot Clients
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                <div class="text-5xl font-bold text-indigo-600 mb-2">11.2%</div>
+                <div class="text-gray-600">Average Reply Rate</div>
+                <div class="text-sm text-gray-500 mt-2">vs. 3-5% traditional</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                <div class="text-5xl font-bold text-indigo-600 mb-2">6-9</div>
+                <div class="text-gray-600">Interested Conversations/Mo</div>
+                <div class="text-sm text-gray-500 mt-2">from 100 leads delivered</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                <div class="text-5xl font-bold text-indigo-600 mb-2">80%+</div>
+                <div class="text-gray-600">Contact Discovery Rate</div>
+                <div class="text-sm text-gray-500 mt-2">vs. 40% single provider</div>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4">💬</div>
+                    <div>
+                        <p class="text-lg text-gray-700 italic mb-4">
+                            "I spent 6 months manually sourcing. Got maybe 3 decent conversations. First month with DealSourceAI,
+                            I had 7 calls with interested sellers. Two are now in LOI stage. This is a game-changer."
+                        </p>
+                        <p class="text-gray-600 font-semibold">— Search fund searcher, HBS '23</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4">💬</div>
+                    <div>
+                        <p class="text-lg text-gray-700 italic mb-4">
+                            "We were spending $150K/year on two researchers. Now we spend $300K on DealSourceAI and get 3x the qualified pipeline.
+                            Plus our researchers can focus on deeper diligence instead of lead generation."
+                        </p>
+                        <p class="text-gray-600 font-semibold">— VP Corp Dev, lower middle-market PE firm ($100M AUM)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                Simple, Transparent Pricing
+            </h2>
+            <p class="text-xl text-gray-600">Choose the tier that fits your deal velocity</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Searcher Tier -->
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-8">
+                <h3 class="text-2xl font-bold mb-2">Searcher</h3>
+                <div class="text-4xl font-bold mb-2">$5K<span class="text-xl text-gray-500">/mo</span></div>
+                <p class="text-gray-600 mb-6">Perfect for search funds</p>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        50 hot leads per month
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Database access
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Self-serve platform
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Monthly reporting
+                    </li>
+                    <li class="flex items-start text-gray-400">
+                        <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        No managed outreach
+                    </li>
+                </ul>
+
+                <a href="#demo" class="block text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Professional Tier (Popular) -->
+            <div class="bg-white border-4 border-indigo-600 rounded-lg p-8 relative">
+                <div class="absolute top-0 right-0 bg-indigo-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                    MOST POPULAR
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                <div class="text-4xl font-bold mb-2">$15K<span class="text-xl text-gray-500">/mo</span></div>
+                <p class="text-gray-600 mb-6">Perfect for PE firms</p>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <strong>100 hot leads per month</strong>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <strong>20 AI outreaches/month</strong>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Account manager
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Weekly pipeline reviews
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Custom research (quarterly)
+                    </li>
+                </ul>
+
+                <a href="#pilot" class="block text-center bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">
+                    Start Pilot (50% Off)
+                </a>
+            </div>
+
+            <!-- Enterprise Tier -->
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-8">
+                <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                <div class="text-4xl font-bold mb-2">$25K<span class="text-xl text-gray-500">/mo</span></div>
+                <p class="text-gray-600 mb-1">+ 1% success fee</p>
+                <p class="text-sm text-gray-500 mb-6">For serious acquirers</p>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <strong>200 hot leads per month</strong>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <strong>100 AI outreaches/month</strong>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        White-label reports
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        API access + CRM integration
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Bi-weekly strategy calls
+                    </li>
+                </ul>
+
+                <a href="#demo" class="block text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-gray-600">All tiers include: Retirement scoring, contact enrichment, platform access, email support</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pilot CTA Section -->
+<section id="pilot" class="py-20 bg-yellow-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="text-yellow-500 text-5xl mb-4">🎯</div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Pilot Program: 50% Off for 3 Months
+            </h2>
+            <p class="text-xl text-gray-600 mb-6">
+                Professional tier at <strong>$10,000/month</strong> (regularly $15,000)
+            </p>
+
+            <div class="bg-gray-50 p-6 rounded-lg mb-6 text-left">
+                <p class="font-semibold mb-3">What you get:</p>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        100 qualified leads per month matching your criteria
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        20 personalized AI outreach campaigns sent on your behalf
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Weekly pipeline reviews with account manager
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        Full platform access with retirement scoring
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-indigo-50 border-l-4 border-indigo-600 p-4 mb-6 text-left">
+                <p class="text-sm font-semibold text-indigo-900">Requirements:</p>
+                <ul class="text-sm text-indigo-800 mt-2 space-y-1">
+                    <li>• Start by March 15, 2026</li>
+                    <li>• Provide monthly feedback (30-min calls)</li>
+                    <li>• Willing to be a case study if successful</li>
+                </ul>
+            </div>
+
+            <p class="text-red-600 font-semibold mb-6">⚠️ Only 2 spots remaining</p>
+
+            <a href="mailto:founders@dealsourceai.com?subject=Pilot Program Application" class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 shadow-lg">
+                Apply for Pilot Program
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Demo/CTA Section -->
+<section id="demo" class="py-20 bg-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-6">
+            See DealSourceAI in Action
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+            Book a 15-minute demo to see live retirement scoring, sample leads, and ROI analysis for your fund
+        </p>
+
+        <div class="bg-gray-800 p-8 rounded-lg mb-8">
+            <p class="font-semibold mb-4">In the demo, you'll see:</p>
+            <div class="grid md:grid-cols-2 gap-4 text-left">
+                <div class="flex items-start">
+                    <svg class="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    25 sample leads in your target industry/geography
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    How retirement scoring works (live platform walkthrough)
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    Example AI-generated outreach messages
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    ROI calculator customized to your situation
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:founders@dealsourceai.com?subject=Demo Request" class="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 shadow-lg">
+                Schedule Demo
+            </a>
+            <a href="mailto:founders@dealsourceai.com?subject=Sample Report Request" class="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 shadow-lg border-2 border-white">
+                Get Sample Report
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">
+            Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-6">
+            <details class="bg-gray-50 p-6 rounded-lg">
+                <summary class="font-semibold text-lg cursor-pointer">How is this different from Grata or Sourcescrub?</summary>
+                <p class="mt-3 text-gray-600">
+                    They give you raw company data - you still do all the work. We deliver qualified leads with retirement signals
+                    + we do the outreach for you. They're a tool, we're a service.
+                </p>
+            </details>
+
+            <details class="bg-gray-50 p-6 rounded-lg">
+                <summary class="font-semibold text-lg cursor-pointer">What if the leads don't convert?</summary>
+                <p class="mt-3 text-gray-600">
+                    We deliver leads + outreach. Closing is your job. But our success fee alignment (Enterprise tier) means we win when you win.
+                    Average conversion: 2-4 deals per 100 outreaches. Even if our conversion matches traditional (it's better),
+                    you'll find your deal faster because we feed you 3-4x more qualified conversations.
+                </p>
+            </details>
+
+            <details class="bg-gray-50 p-6 rounded-lg">
+                <summary class="font-semibold text-lg cursor-pointer">How do you find owners before they list?</summary>
+                <p class="mt-3 text-gray-600">
+                    Proprietary retirement scoring algorithm. We analyze: owner age, business tenure, digital decay, website staleness,
+                    industry patterns. Score 70+ = high retirement likelihood. Then we test interest with personalized outreach.
+                </p>
+            </details>
+
+            <details class="bg-gray-50 p-6 rounded-lg">
+                <summary class="font-semibold text-lg cursor-pointer">Is the outreach spam?</summary>
+                <p class="mt-3 text-gray-600">
+                    No. We use Claude AI to generate unique, personalized messages. CAN-SPAM compliant with unsubscribe links.
+                    Professional sender reputation. 8-12% reply rate proves it's working (spam gets <1%).
+                </p>
+            </details>
+
+            <details class="bg-gray-50 p-6 rounded-lg">
+                <summary class="font-semibold text-lg cursor-pointer">How long until I see results?</summary>
+                <p class="mt-3 text-gray-600">
+                    Week 1: Leads delivered. Week 2: Outreach starts. Week 3-4: First responses. Month 2-3: First meetings.
+                    Month 3-6: First LOI. Most pilot clients get 6-9 interested conversations in the first 30 days.
+                </p>
+            </details>
+
+            <details class="bg-gray-50 p-6 rounded-lg">
+                <summary class="font-semibold text-lg cursor-pointer">What industries do you cover?</summary>
+                <p class="mt-3 text-gray-600">
+                    All service businesses, light manufacturing, B2B SaaS, healthcare, professional services, home services.
+                    Sweet spot: $500K-$50M revenue. We can source in any geography (50 states + Canada).
+                </p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4 gradient-text">DealSourceAI</h3>
+                <p class="text-gray-400 text-sm">
+                    Proprietary off-market deal sourcing for PE firms and search funds.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold mb-4">Product</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#how-it-works" class="hover:text-white">How It Works</a></li>
+                    <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+                    <li><a href="#results" class="hover:text-white">Results</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold mb-4">Company</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#demo" class="hover:text-white">Book Demo</a></li>
+                    <li><a href="#pilot" class="hover:text-white">Pilot Program</a></li>
+                    <li><a href="mailto:founders@dealsourceai.com" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li>📧 founders@dealsourceai.com</li>
+                    <li>🌐 dealsourceai.com</li>
+                    <li>📅 calendly.com/dealsourceai/demo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+            <p>&copy; 2026 DealSourceAI. All rights reserved. Built with AI-powered innovation.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
