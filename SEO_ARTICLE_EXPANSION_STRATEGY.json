@@ -1,0 +1,2679 @@
+{
+  "metadata": {
+    "title": "100+ SEO Article Expansion Strategy",
+    "created": "2026-03-03",
+    "total_articles": 160,
+    "scope": [
+      "creditrewardsmax.com (50 articles)",
+      "calc dividend site (50 articles)",
+      "theStackGuide affiliate (30 articles)",
+      "quant platform (30 articles)"
+    ],
+    "research_focus": [
+      "Long-tail keywords",
+      "User pain points",
+      "Content gaps",
+      "Seasonal/trending topics",
+      "Evergreen educational content"
+    ]
+  },
+  "credit_card_site": {
+    "current_state": {
+      "total_articles": 103,
+      "breakdown": {
+        "reviews": 32,
+        "comparisons": 26,
+        "guides": 25,
+        "deep_dives": 20
+      },
+      "target_articles": 153,
+      "new_articles_needed": 50
+    },
+    "articles": [
+      {
+        "id": "cc_001",
+        "title": "Best Chase Credit Cards Stack for Maximum Rewards 2026",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "Chase credit card stack",
+        "secondary_keywords": [
+          "Chase cards rewards maximization",
+          "Chase Freedom Unlimited combination",
+          "Chase Sapphire Preferred stacking"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "rewards enthusiasts, frequent travelers",
+        "outline": [
+          "Why Chase cards stack effectively",
+          "5x/3x category breakdown",
+          "Sapphire Preferred + Freedom combo",
+          "Business card options for personal use",
+          "Annual fee calculations",
+          "Sign-up bonus timing strategy"
+        ]
+      },
+      {
+        "id": "cc_002",
+        "title": "Amex Card Stacking Strategy: Building Your Amex Ecosystem",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "Amex card stacking",
+        "secondary_keywords": [
+          "American Express card combination",
+          "Amex Gold Platinum combo",
+          "Amex Blue card strategy"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "premium card users, Amex loyalists",
+        "outline": [
+          "Amex ecosystem structure",
+          "Gold vs Platinum use cases",
+          "Membership Reward points vs MR",
+          "Schwab Platinum integration",
+          "Business Platinum stacking",
+          "Maximizing statement credits"
+        ]
+      },
+      {
+        "id": "cc_003",
+        "title": "Capital One Credit Card Stack: Budget-Friendly Rewards Strategy",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2800,
+        "primary_keyword": "Capital One card stack",
+        "secondary_keywords": [
+          "Capital One Quicksilver strategy",
+          "Capital One Venture stack",
+          "Capital One card combination"
+        ],
+        "traffic_potential": "monthly: 400-600 searches",
+        "target_audience": "budget-conscious rewards seekers",
+        "outline": [
+          "Capital One card portfolio",
+          "Quicksilver flat-rate benefits",
+          "Venture X business integration",
+          "Sign-up bonus timing",
+          "Category gaps and solutions",
+          "Foreign transaction fee comparison"
+        ]
+      },
+      {
+        "id": "cc_004",
+        "title": "Citi Credit Cards Optimization: Building Your Citi Portfolio",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2800,
+        "primary_keyword": "Citi credit card strategy",
+        "secondary_keywords": [
+          "Citi Premier card stacking",
+          "Citi Prestige combination",
+          "Citi rewards maximization"
+        ],
+        "traffic_potential": "monthly: 350-500 searches",
+        "target_audience": "international travelers, premium seekers",
+        "outline": [
+          "Citi card ecosystem",
+          "Premier card category bonuses",
+          "Prestige luxury benefits",
+          "Double Cash flat-rate card",
+          "Prestige airport lounge access",
+          "Travel insurance coverage"
+        ]
+      },
+      {
+        "id": "cc_005",
+        "title": "Discover Card Strategy: Maximizing a Flexible Rewards Card",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "medium",
+        "word_count": 2500,
+        "primary_keyword": "Discover card rewards strategy",
+        "secondary_keywords": [
+          "Discover it card maximization",
+          "Discover rotating categories",
+          "Discover cash back strategy"
+        ],
+        "traffic_potential": "monthly: 300-450 searches",
+        "target_audience": "budget seekers, no-annual-fee advocates",
+        "outline": [
+          "Discover card types overview",
+          "Rotating 5% categories guide",
+          "Bonus categories calendar",
+          "No annual fee benefits",
+          "Cash back redemption options",
+          "Stacking with other cards"
+        ]
+      },
+      {
+        "id": "cc_006",
+        "title": "Credit Card for Flight Bookings: Direct vs Flexible Redemption",
+        "content_type": "comparison",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "best credit card for flights",
+        "secondary_keywords": [
+          "flight booking credit card",
+          "airline card vs transfer card",
+          "travel credit card strategy"
+        ],
+        "traffic_potential": "monthly: 1500-2200 searches",
+        "target_audience": "frequent flyers, travel enthusiasts",
+        "outline": [
+          "Transfer partners vs airline cards",
+          "Chase Sapphire Preferred strategy",
+          "Airline-specific card benefits",
+          "Flight redemption optimization",
+          "Award availability and timing",
+          "Tax implications and valuation"
+        ]
+      },
+      {
+        "id": "cc_007",
+        "title": "Hotel Credit Cards: Which Card Works for Your Travel Style",
+        "content_type": "comparison",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "best credit card for hotels",
+        "secondary_keywords": [
+          "hotel rewards credit card",
+          "Hilton Amex card benefits",
+          "hotel elite status cards"
+        ],
+        "traffic_potential": "monthly: 1200-1800 searches",
+        "target_audience": "business travelers, hotel loyalists",
+        "outline": [
+          "Branded hotel cards (Hilton, Marriott, Hyatt)",
+          "Co-branded vs transfer-friendly cards",
+          "Elite status benefit comparison",
+          "Room upgrade guarantees",
+          "Free night certificates explained",
+          "Category matching strategy"
+        ]
+      },
+      {
+        "id": "cc_008",
+        "title": "Restaurant Credit Cards: Maximizing Dining Rewards 2026",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "best credit card for restaurants",
+        "secondary_keywords": [
+          "dining rewards credit card",
+          "restaurant cashback card",
+          "fine dining card benefits"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "foodies, frequent diners, business entertainers",
+        "outline": [
+          "3x dining cards overview",
+          "Rotating category strategy",
+          "Expense account optimization",
+          "Special dining programs (Amex FHR, etc)",
+          "Concierge services comparison",
+          "Fine dining reservation tools"
+        ]
+      },
+      {
+        "id": "cc_009",
+        "title": "Gas Station Credit Cards: Maximize Fuel Rewards 2026",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "medium",
+        "word_count": 2400,
+        "primary_keyword": "best gas credit card",
+        "secondary_keywords": [
+          "fuel rewards credit card",
+          "gas cashback card",
+          "gas station rewards"
+        ],
+        "traffic_potential": "monthly: 1100-1500 searches",
+        "target_audience": "commuters, high-mileage drivers",
+        "outline": [
+          "3% vs 2% vs 1% gas cards",
+          "Category rotation cards",
+          "Wholesale club benefits (Costco, Sam's Club)",
+          "Gas price tracking integration",
+          "Seasonal strategy shifts",
+          "Calculation: is it worth it?"
+        ]
+      },
+      {
+        "id": "cc_010",
+        "title": "Grocery Credit Cards: Earning on Your Highest Spend Category",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "high",
+        "word_count": 2600,
+        "primary_keyword": "best credit card for groceries",
+        "secondary_keywords": [
+          "grocery rewards credit card",
+          "grocery cashback card",
+          "grocery category maximization"
+        ],
+        "traffic_potential": "monthly: 1400-1900 searches",
+        "target_audience": "budget-conscious families, grocery optimizers",
+        "outline": [
+          "5% rotating grocery cards",
+          "Wholesale club card benefits",
+          "Online grocery ordering optimization",
+          "Grocery delivery service comparison",
+          "Category coding in detail",
+          "Alternative grocery strategies"
+        ]
+      },
+      {
+        "id": "cc_011",
+        "title": "Tax Deduction Strategy: Using Credit Card Rewards for Business Deductions",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3000,
+        "primary_keyword": "credit card rewards tax deduction",
+        "secondary_keywords": [
+          "business reward redemption tax",
+          "cashback taxable income",
+          "reward points tax treatment"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "self-employed, business owners, accountants",
+        "outline": [
+          "IRS treatment of reward points",
+          "Taxable vs non-taxable redemptions",
+          "Business vs personal spending",
+          "Accurate tracking systems",
+          "Documentation requirements",
+          "Questions to ask your CPA"
+        ]
+      },
+      {
+        "id": "cc_012",
+        "title": "Credit Score Impact: Strategic Credit Card Applications Without Damaging Credit",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "credit card applications credit score impact",
+        "secondary_keywords": [
+          "hard inquiry effect on score",
+          "churn strategy and credit",
+          "sign-up bonus hunting safely"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "rewards hobbyists, credit-conscious consumers",
+        "outline": [
+          "Hard inquiries explained",
+          "Temporary vs permanent score drops",
+          "Timing strategies",
+          "Card cancellation timing",
+          "Authorized user strategy",
+          "Monitoring and tracking tools"
+        ]
+      },
+      {
+        "id": "cc_013",
+        "title": "Building Credit from Bad Credit: Card Strategy for Poor Credit Repair",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "credit card bad credit to excellent",
+        "secondary_keywords": [
+          "secured credit card strategy",
+          "credit repair card progression",
+          "rebuilding credit score pathway"
+        ],
+        "traffic_potential": "monthly: 2000-3000 searches",
+        "target_audience": "credit rebuilders, recent bankrupty filers",
+        "outline": [
+          "Secured card requirements",
+          "Graduation timeline",
+          "Authorized user strategy",
+          "Credit mix optimization",
+          "Utilization ratio management",
+          "Timeline to excellent credit (760+)"
+        ]
+      },
+      {
+        "id": "cc_014",
+        "title": "Sign-Up Bonus Hunting: Maximizing Points While Staying Smart",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "credit card sign-up bonus strategy",
+        "secondary_keywords": [
+          "meet spending requirement tips",
+          "bonus point valuation",
+          "churn strategy"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "rewards enthusiasts, points optimizers",
+        "outline": [
+          "Bonus value estimation",
+          "Minimum spend strategies",
+          "Manufactured spending overview",
+          "Timing multiple applications",
+          "Social implications",
+          "When it stops paying off"
+        ]
+      },
+      {
+        "id": "cc_015",
+        "title": "Annual Fee Worth It? Calculating ROI on Premium Cards",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2500,
+        "primary_keyword": "credit card annual fee worth it",
+        "secondary_keywords": [
+          "premium card ROI calculation",
+          "statement credit value",
+          "annual fee breakeven"
+        ],
+        "traffic_potential": "monthly: 1000-1400 searches",
+        "target_audience": "premium card evaluators, budget-conscious premium seekers",
+        "outline": [
+          "Statement credit calculations",
+          "Travel credit redemption value",
+          "Lounge access monetization",
+          "Concierge services value",
+          "Spreadsheet template",
+          "Renewal decisions"
+        ]
+      },
+      {
+        "id": "cc_016",
+        "title": "Negotiating APR Reductions: Tactics to Lower Your Credit Card Interest Rate",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "easy",
+        "priority": "medium",
+        "word_count": 2400,
+        "primary_keyword": "negotiate credit card APR reduction",
+        "secondary_keywords": [
+          "lower interest rate credit card",
+          "APR negotiation script",
+          "credit card call strategy"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "credit users carrying balances, debt reduction seekers",
+        "outline": [
+          "Timing your call",
+          "Script and talking points",
+          "Document your history",
+          "Competitive offers",
+          "What to do if rejected",
+          "Follow-up strategy"
+        ]
+      },
+      {
+        "id": "cc_017",
+        "title": "Credit Limit Increase: How to Ask and When You'll Get Approved",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "easy",
+        "priority": "medium",
+        "word_count": 2400,
+        "primary_keyword": "credit limit increase how to request",
+        "secondary_keywords": [
+          "credit card limit increase approval",
+          "soft pull vs hard pull",
+          "credit limit increase timing"
+        ],
+        "traffic_potential": "monthly: 700-1000 searches",
+        "target_audience": "credit utilization optimizers, credit builders",
+        "outline": [
+          "Online vs phone request",
+          "Soft vs hard pull inquiry",
+          "Approval timeline",
+          "Multiple requests strategy",
+          "Utilization ratio benefits",
+          "When to stop requesting"
+        ]
+      },
+      {
+        "id": "cc_018",
+        "title": "Travel Insurance on Credit Cards: What's Actually Covered",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2800,
+        "primary_keyword": "credit card travel insurance coverage",
+        "secondary_keywords": [
+          "trip delay insurance",
+          "trip cancellation insurance",
+          "emergency evacuation coverage"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "frequent travelers, international travelers",
+        "outline": [
+          "Coverage types explained",
+          "Claiming process walkthrough",
+          "Documentation requirements",
+          "Coverage limits and exclusions",
+          "Card comparison table",
+          "When you need supplemental insurance"
+        ]
+      },
+      {
+        "id": "cc_019",
+        "title": "Purchase Protection: Understanding Credit Card Benefits and Limits",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2600,
+        "primary_keyword": "credit card purchase protection coverage",
+        "secondary_keywords": [
+          "extended warranty coverage",
+          "price guarantee protection",
+          "buyer protection claims"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "big spenders, high-value purchase makers",
+        "outline": [
+          "Purchase protection basics",
+          "Extended warranty eligibility",
+          "Price protection and price matching",
+          "Return protection timing",
+          "Claiming process and documentation",
+          "Coverage gaps"
+        ]
+      },
+      {
+        "id": "cc_020",
+        "title": "Business Credit Cards for Sole Proprietors: Personal vs Business Cards",
+        "content_type": "comparison",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "best business credit card for sole proprietor",
+        "secondary_keywords": [
+          "business card vs personal card",
+          "sole proprietor business credit",
+          "business expense tracking cards"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "solopreneurs, freelancers, small business owners",
+        "outline": [
+          "Legal structures and reporting",
+          "Expense tracking advantages",
+          "Spending limits and features",
+          "Tax implications",
+          "Pricing and fees",
+          "Timeline to business credit"
+        ]
+      },
+      {
+        "id": "cc_021",
+        "title": "Student Credit Cards: Building Credit as a Young Adult",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "medium",
+        "word_count": 2200,
+        "primary_keyword": "best student credit card",
+        "secondary_keywords": [
+          "first credit card for students",
+          "student card graduation strategy",
+          "building credit in college"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "students, young adults, first-time card applicants",
+        "outline": [
+          "Student card eligibility",
+          "No-fee card advantages",
+          "Category bonuses for students",
+          "Graduation to premium cards",
+          "Credit building tips",
+          "Avoiding debt traps"
+        ]
+      },
+      {
+        "id": "cc_022",
+        "title": "Foreign Transaction Fees: Cards Without International Fees",
+        "content_type": "comparison",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "high",
+        "word_count": 2400,
+        "primary_keyword": "credit cards no foreign transaction fees",
+        "secondary_keywords": [
+          "international travel card",
+          "no foreign fee cards",
+          "global spending rewards"
+        ],
+        "traffic_potential": "monthly: 1400-1900 searches",
+        "target_audience": "international travelers, expats, global workers",
+        "outline": [
+          "How foreign fees work",
+          "No-fee card options",
+          "Dynamic currency conversion issues",
+          "ATM withdrawal strategies",
+          "Notifying card issuers",
+          "Backup card strategy"
+        ]
+      },
+      {
+        "id": "cc_023",
+        "title": "Balance Transfer Cards: Strategic Debt Consolidation with 0% APR",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2900,
+        "primary_keyword": "balance transfer credit card 0% APR",
+        "secondary_keywords": [
+          "debt consolidation strategy",
+          "0% APR timeframe",
+          "balance transfer fee strategy"
+        ],
+        "traffic_potential": "monthly: 1800-2400 searches",
+        "target_audience": "debt consolidators, balance transferers",
+        "outline": [
+          "Balance transfer mechanics",
+          "0% APR duration comparison",
+          "Balance transfer fees explained",
+          "Payoff calculation strategy",
+          "Avoiding the debt trap",
+          "Impact on credit score"
+        ]
+      },
+      {
+        "id": "cc_024",
+        "title": "Cashback vs Points: Which Rewards Program is Better for You",
+        "content_type": "comparison",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2700,
+        "primary_keyword": "cashback vs rewards points credit card",
+        "secondary_keywords": [
+          "points vs cash back comparison",
+          "points flexibility analysis",
+          "best rewards system"
+        ],
+        "traffic_potential": "monthly: 1100-1600 searches",
+        "target_audience": "rewards evaluators, optimizers",
+        "outline": [
+          "Cashback advantages and disadvantages",
+          "Points and transfer partners",
+          "Valuation methodology",
+          "Redemption flexibility",
+          "Long-term strategy",
+          "Hybrid approach"
+        ]
+      },
+      {
+        "id": "cc_025",
+        "title": "Authorized User Strategy: Earning Points While Building Credit for Others",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "medium",
+        "word_count": 2300,
+        "primary_keyword": "authorized user credit card strategy",
+        "secondary_keywords": [
+          "adding authorized user points",
+          "authorized user credit building",
+          "authorized user for points"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "account holders, credit builders, couples",
+        "outline": [
+          "Authorized user process",
+          "Points earning on AU cards",
+          "Credit history impact",
+          "Relationship considerations",
+          "Removing authorized users",
+          "Maximizing value"
+        ]
+      },
+      {
+        "id": "cc_026",
+        "title": "Credit Card Rewards Transfer Partners: Mapping Chase Ultimate Rewards",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "Chase Ultimate Rewards transfer partners",
+        "secondary_keywords": [
+          "points transfer strategy",
+          "airline partner redemption",
+          "hotel partner value"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "transfer point enthusiasts, maximizers",
+        "outline": [
+          "Transfer partner overview",
+          "Airline partner analysis",
+          "Hotel partner analysis",
+          "Optimal transfer ratios",
+          "Availability hunting",
+          "Transfer timing strategy"
+        ]
+      },
+      {
+        "id": "cc_027",
+        "title": "Premium Card Lounge Access: Which Cards Offer the Best Airport Benefits",
+        "content_type": "comparison",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2600,
+        "primary_keyword": "credit card airport lounge access",
+        "secondary_keywords": [
+          "lounge access card comparison",
+          "Priority Pass benefits",
+          "airline lounge membership"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "frequent flyers, premium card evaluators",
+        "outline": [
+          "Lounge access types",
+          "Priority Pass explained",
+          "Airline lounge access",
+          "Guest policies",
+          "Lounge quality ratings",
+          "Monetizing the benefit"
+        ]
+      },
+      {
+        "id": "cc_028",
+        "title": "Card Churning: How to Ethically Maximize Sign-up Bonuses",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 2900,
+        "primary_keyword": "credit card churning strategy",
+        "secondary_keywords": [
+          "card churning ethics",
+          "sign-up bonus rules",
+          "card application frequency"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "rewards hobbyists, optimization enthusiasts",
+        "outline": [
+          "Churning definition and legality",
+          "Issuer policies and restrictions",
+          "Timing and spacing applications",
+          "Relationship impact",
+          "Tax implications",
+          "Risk analysis"
+        ]
+      },
+      {
+        "id": "cc_029",
+        "title": "Emergency Travel: Using a Credit Card to Book Last-Minute Flights",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "low",
+        "word_count": 2000,
+        "primary_keyword": "credit card emergency travel booking",
+        "secondary_keywords": [
+          "last-minute flight booking",
+          "travel credit card emergency",
+          "urgent travel rewards"
+        ],
+        "traffic_potential": "monthly: 300-500 searches",
+        "target_audience": "emergency travelers, flexible planners",
+        "outline": [
+          "Credit card travel credits",
+          "Redemption flexibility",
+          "Award availability",
+          "Cash booking vs points",
+          "Travel protections",
+          "Cancellation policies"
+        ]
+      },
+      {
+        "id": "cc_030",
+        "title": "Seasonal Credit Card Spending Optimization: Matching Cards to Seasons",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2500,
+        "primary_keyword": "seasonal credit card spending strategy",
+        "secondary_keywords": [
+          "rotating category cards",
+          "seasonal bonus maximization",
+          "card rotation strategy"
+        ],
+        "traffic_potential": "monthly: 400-600 searches",
+        "target_audience": "optimization enthusiasts, strategic spenders",
+        "outline": [
+          "Seasonal spending patterns",
+          "Rotating category calendar",
+          "Seasonal bonuses (holiday, etc)",
+          "Switching strategies",
+          "Tracking systems",
+          "Year-round optimization"
+        ]
+      },
+      {
+        "id": "cc_031",
+        "title": "Credit Card for Military Members: SCRA and Service Member Benefits",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "low",
+        "word_count": 2200,
+        "primary_keyword": "military credit card SCRA benefits",
+        "secondary_keywords": [
+          "service member credit card",
+          "SCRA interest rate reduction",
+          "military specific rewards"
+        ],
+        "traffic_potential": "monthly: 200-400 searches",
+        "target_audience": "military members, veterans",
+        "outline": [
+          "SCRA law overview",
+          "Eligible card types",
+          "Rate reduction process",
+          "Military-specific cards",
+          "VA benefits integration",
+          "Deployment considerations"
+        ]
+      },
+      {
+        "id": "cc_032",
+        "title": "Credit Card for Seniors: Simplified Cards and Fraud Protection",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "easy",
+        "priority": "low",
+        "word_count": 2200,
+        "primary_keyword": "best credit card for seniors",
+        "secondary_keywords": [
+          "senior credit card no annual fee",
+          "senior fraud protection",
+          "easy to use credit card"
+        ],
+        "traffic_potential": "monthly: 300-500 searches",
+        "target_audience": "seniors, elder care planners",
+        "outline": [
+          "Senior-friendly features",
+          "No annual fee requirements",
+          "Fraud protection priority",
+          "Easy interface options",
+          "Co-applicant options",
+          "Rewards simplicity"
+        ]
+      }
+    ]
+  },
+  "dividend_calculator_site": {
+    "current_state": {
+      "total_articles": 79,
+      "focus_areas": [
+        "DRIP strategies",
+        "Dividend aristocrats",
+        "Stock analysis",
+        "Tax guides"
+      ],
+      "target_articles": 129,
+      "new_articles_needed": 50
+    },
+    "articles": [
+      {
+        "id": "div_001",
+        "title": "Dividend Aristocrats List 2026: Complete Analysis of Dividend Kings",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 4000,
+        "primary_keyword": "dividend aristocrats list 2026",
+        "secondary_keywords": [
+          "dividend kings stocks",
+          "50+ year dividend stocks",
+          "dividend aristocrats analysis"
+        ],
+        "traffic_potential": "monthly: 1200-1800 searches",
+        "target_audience": "dividend investors, retirement planners",
+        "outline": [
+          "Aristocrats definition (25+ years)",
+          "Kings definition (50+ years)",
+          "2026 current list analysis",
+          "Best performers this year",
+          "Recent additions/removals",
+          "Sector breakdown",
+          "Valuation comparison",
+          "Selection criteria"
+        ]
+      },
+      {
+        "id": "div_002",
+        "title": "Utility Stock Dividend Strategy: Building a Utility Sector Portfolio",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "utility stocks dividend portfolio",
+        "secondary_keywords": [
+          "electric utility dividend",
+          "utility sector investing",
+          "stable dividend yield stocks"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "income seekers, conservative investors",
+        "outline": [
+          "Utility sector overview",
+          "Regulatory environment",
+          "Top utilities analysis (Duke, NextEra, etc)",
+          "Dividend yield vs growth",
+          "Rate hike impact",
+          "Geographic diversification",
+          "Preferred shares integration",
+          "Dollar-cost averaging strategy"
+        ]
+      },
+      {
+        "id": "div_003",
+        "title": "REIT Dividend Investing: Using Real Estate for Income",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "REIT dividend investing guide",
+        "secondary_keywords": [
+          "real estate investment trust income",
+          "REIT portfolio strategy",
+          "REIT tax treatment"
+        ],
+        "traffic_potential": "monthly: 1100-1600 searches",
+        "target_audience": "income investors, real estate enthusiasts",
+        "outline": [
+          "REIT structure and requirements",
+          "Dividend tax treatment",
+          "REIT types (residential, commercial, healthcare)",
+          "Top REITs analysis",
+          "Interest rate sensitivity",
+          "Residential vs commercial vs specialty",
+          "Portfolio allocation percentage",
+          "Sector cycles and timing"
+        ]
+      },
+      {
+        "id": "div_004",
+        "title": "Telecom Dividend Stocks: Analyzing AT&T, Verizon, and Lumen",
+        "content_type": "analysis",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "telecom stock dividend analysis",
+        "secondary_keywords": [
+          "AT&T dividend stock",
+          "Verizon dividend yield",
+          "telecom sector dividend"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "dividend investors, sector analysts",
+        "outline": [
+          "Telecom sector overview",
+          "AT&T dividend and challenges",
+          "Verizon dividend strength",
+          "Lumen dividend sustainability",
+          "5G investment impacts",
+          "Debt levels analysis",
+          "Free cash flow trends",
+          "Buy/hold/sell analysis"
+        ]
+      },
+      {
+        "id": "div_005",
+        "title": "Pharmaceutical Dividend Stocks: Healthcare Income Strategy",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 3200,
+        "primary_keyword": "pharmaceutical dividend stocks",
+        "secondary_keywords": [
+          "pharma company dividend",
+          "healthcare dividend investing",
+          "drug company stock analysis"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "healthcare investors, dividend seekers",
+        "outline": [
+          "Pharma business model",
+          "Patent cliff risks",
+          "Top pharma dividends (JNJ, PFE, AZN)",
+          "Pipeline analysis importance",
+          "FDA approval impact",
+          "Drug pricing pressures",
+          "M&A activity",
+          "Dividend sustainability"
+        ]
+      },
+      {
+        "id": "div_006",
+        "title": "Canadian Dividend Stocks: Foreign Dividend Tax Optimization",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3200,
+        "primary_keyword": "Canadian dividend stocks US investors",
+        "secondary_keywords": [
+          "Canadian dividend tax withholding",
+          "Canadian stock dividend",
+          "foreign dividend tax treaty"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "international investors, tax-conscious investors",
+        "outline": [
+          "Canadian dividend tax treatment",
+          "Withholding tax rules",
+          "Tax treaty benefits",
+          "RRSP vs non-registered accounts",
+          "Top Canadian dividend stocks",
+          "Currency risk considerations",
+          "FX hedging strategy",
+          "Account location strategy"
+        ]
+      },
+      {
+        "id": "div_007",
+        "title": "UK Dividend Stocks: Investing in British Dividend Aristocrats",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "low",
+        "word_count": 2800,
+        "primary_keyword": "UK dividend stocks investing",
+        "secondary_keywords": [
+          "British dividend stocks",
+          "FTSE dividend aristocrats",
+          "UK stock dividend yield"
+        ],
+        "traffic_potential": "monthly: 300-500 searches",
+        "target_audience": "international investors, diversification seekers",
+        "outline": [
+          "UK dividend culture",
+          "Tax withholding rates",
+          "Top UK dividend stocks",
+          "Currency considerations",
+          "Brexit impact on dividends",
+          "Sector analysis (financials, energy, etc)",
+          "Valuation attractiveness",
+          "Account structure for efficiency"
+        ]
+      },
+      {
+        "id": "div_008",
+        "title": "Dividend Reinvestment vs Cash Withdrawal: DRIP Strategy Analysis",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3000,
+        "primary_keyword": "DRIP vs cash dividend strategy",
+        "secondary_keywords": [
+          "dividend reinvestment plan",
+          "DRIP vs taking dividends",
+          "compounding dividend strategy"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "long-term investors, growth-focused retirees",
+        "outline": [
+          "DRIP mechanics",
+          "Compounding calculation",
+          "Tax implications both ways",
+          "Dollar-cost averaging benefits",
+          "Fee comparison",
+          "When to switch strategies",
+          "Timing the switch",
+          "Reinvestment calculations"
+        ]
+      },
+      {
+        "id": "div_009",
+        "title": "Monthly Dividend Stocks: Building Consistent Income Streams",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2900,
+        "primary_keyword": "monthly dividend stocks list",
+        "secondary_keywords": [
+          "monthly dividend paying stocks",
+          "monthly income investing",
+          "monthly cash flow stocks"
+        ],
+        "traffic_potential": "monthly: 1400-1900 searches",
+        "target_audience": "income-focused investors, retirees",
+        "outline": [
+          "Monthly vs quarterly frequency",
+          "Monthly dividend stock list",
+          "Building a monthly ladder",
+          "Staggered payment schedule",
+          "Quality of monthly dividend stocks",
+          "Sector breakdown",
+          "Preferred shares as monthly dividends",
+          "Calculation tool for income planning"
+        ]
+      },
+      {
+        "id": "div_010",
+        "title": "Dividend Aristocrats vs Dividend Achievers: Growth Potential Analysis",
+        "content_type": "comparison",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2700,
+        "primary_keyword": "dividend aristocrats vs achievers",
+        "secondary_keywords": [
+          "S&P dividend achievers list",
+          "pre-aristocrat dividend stocks",
+          "emerging dividend stocks"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "growth dividend investors, early movers",
+        "outline": [
+          "Definitions explained",
+          "Aristocrats characteristics",
+          "Achievers characteristics",
+          "Growth potential comparison",
+          "Recent achievers analysis",
+          "Future aristocrats forecasting",
+          "Valuation at different stages",
+          "Position sizing strategy"
+        ]
+      },
+      {
+        "id": "div_011",
+        "title": "Dividend Yield Trap: Avoiding High-Yield Stocks That Cut Dividends",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 2900,
+        "primary_keyword": "dividend yield trap stocks",
+        "secondary_keywords": [
+          "high dividend yield warning signs",
+          "dividend cut prediction",
+          "unsustainable dividend stocks"
+        ],
+        "traffic_potential": "monthly: 1000-1400 searches",
+        "target_audience": "conservative investors, dividend safety seekers",
+        "outline": [
+          "Yield trap definition",
+          "Red flags (debt, FCF, payout ratio)",
+          "Case studies of dividend cuts",
+          "Payout ratio analysis",
+          "Free cash flow importance",
+          "Debt-to-equity warning signs",
+          "Sector-specific risks",
+          "Due diligence checklist"
+        ]
+      },
+      {
+        "id": "div_012",
+        "title": "Covered Calls on Dividend Stocks: Generating Additional Income",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3200,
+        "primary_keyword": "covered calls dividend stocks income",
+        "secondary_keywords": [
+          "dividend + covered call strategy",
+          "call option dividend stocks",
+          "income generation covered calls"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "options-experienced investors, income maximizers",
+        "outline": [
+          "Covered call mechanics",
+          "Dividend interaction with calls",
+          "Call assignment impact",
+          "Strike selection strategy",
+          "Expiration timing",
+          "Risk/reward analysis",
+          "Tax implications",
+          "Examples with specific stocks"
+        ]
+      },
+      {
+        "id": "div_013",
+        "title": "Preferred Shares vs Common Dividend Stocks: Income Comparison",
+        "content_type": "comparison",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3100,
+        "primary_keyword": "preferred shares vs dividend stocks",
+        "secondary_keywords": [
+          "preferred share income strategy",
+          "preferred vs common shares",
+          "fixed income preferred shares"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "income investors, asset allocation planners",
+        "outline": [
+          "Preferred share structure",
+          "Yield comparison with common",
+          "Priority in bankruptcy",
+          "Interest rate sensitivity",
+          "Callable preferred shares",
+          "Tax treatment differences",
+          "Credit risk analysis",
+          "Portfolio allocation role"
+        ]
+      },
+      {
+        "id": "div_014",
+        "title": "High-Yield Stock Screener: Finding Hidden Dividend Gems",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "dividend stock screener strategy",
+        "secondary_keywords": [
+          "dividend stock screening criteria",
+          "finding dividend stocks",
+          "dividend stock selection tool"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "self-directed investors, stock researchers",
+        "outline": [
+          "Essential screening criteria",
+          "Yield floors and ceilings",
+          "Payout ratio filtering",
+          "Debt ratio requirements",
+          "Growth rate filtering",
+          "Free cash flow analysis",
+          "Dividend growth rate filters",
+          "Popular screeners review"
+        ]
+      },
+      {
+        "id": "div_015",
+        "title": "Dividend Tax-Loss Harvesting: Optimizing After-Tax Returns",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 2800,
+        "primary_keyword": "dividend tax loss harvesting strategy",
+        "secondary_keywords": [
+          "tax loss harvesting dividends",
+          "dividend stock tax strategy",
+          "wash sale rule dividends"
+        ],
+        "traffic_potential": "monthly: 400-600 searches",
+        "target_audience": "tax-conscious investors, high earners",
+        "outline": [
+          "Tax loss harvesting basics",
+          "Wash sale rule application",
+          "Dividend stock substitutions",
+          "Timing considerations",
+          "Tracking and documentation",
+          "Year-end strategy",
+          "Long-term vs short-term gains",
+          "CPA coordination"
+        ]
+      },
+      {
+        "id": "div_016",
+        "title": "Dividend Contenders: Stocks Likely to Become Aristocrats by 2030",
+        "content_type": "analysis",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "future dividend aristocrats candidates",
+        "secondary_keywords": [
+          "upcoming dividend aristocrats",
+          "emerging dividend stocks",
+          "dividend growth potential stocks"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "growth dividend investors, long-term planners",
+        "outline": [
+          "Selection criteria for contenders",
+          "Recent years of increases analysis",
+          "Industry trend analysis",
+          "Management analysis",
+          "Growth trajectory evaluation",
+          "Risk assessment",
+          "Valuation attractiveness",
+          "Portfolio positioning strategy"
+        ]
+      },
+      {
+        "id": "div_017",
+        "title": "Dividend Seasonality: Timing Your Purchases for Tax Efficiency",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2600,
+        "primary_keyword": "dividend seasonality strategy",
+        "secondary_keywords": [
+          "seasonal dividend investing",
+          "ex-dividend date strategy",
+          "dividend calendar"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "tax-conscious investors, traders",
+        "outline": [
+          "Dividend calendar patterns",
+          "Ex-dividend date mechanics",
+          "Record date vs payment date",
+          "Quarterly vs special dividends",
+          "Tax-loss harvesting timing",
+          "Ex-dividend date price impact",
+          "Corporate action planning",
+          "Calendar tool"
+        ]
+      },
+      {
+        "id": "div_018",
+        "title": "Consumer Staples Dividend Stocks: Recession-Resistant Income",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2900,
+        "primary_keyword": "consumer staples dividend stocks",
+        "secondary_keywords": [
+          "consumer staples dividend investing",
+          "recession resistant dividend stocks",
+          "CPG company dividends"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "conservative investors, defensive strategists",
+        "outline": [
+          "Consumer staples characteristics",
+          "Top staples dividend stocks",
+          "Recession resilience benefits",
+          "Inflation impact analysis",
+          "Competition pressure",
+          "Brand moat importance",
+          "Margin pressure analysis",
+          "Valuation comparisons"
+        ]
+      },
+      {
+        "id": "div_019",
+        "title": "Energy Sector Dividend Stocks: Oil Company Income Strategy",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2900,
+        "primary_keyword": "energy sector dividend stocks",
+        "secondary_keywords": [
+          "oil company dividends",
+          "energy stock income",
+          "oil dividend yield"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "value investors, income seekers",
+        "outline": [
+          "Energy sector cyclicality",
+          "Oil price impact on dividends",
+          "Top energy dividend stocks",
+          "Free cash flow sensitivity",
+          "Renewable energy transition",
+          "Debt levels in energy",
+          "Dividend sustainability in downturns",
+          "Valuation cycles"
+        ]
+      },
+      {
+        "id": "div_020",
+        "title": "Financial Services Dividend Stocks: Banks and Insurance Income",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2900,
+        "primary_keyword": "financial services dividend stocks",
+        "secondary_keywords": [
+          "bank dividend stocks",
+          "insurance company dividends",
+          "financial sector income"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "income investors, value seekers",
+        "outline": [
+          "Financial sector overview",
+          "Interest rate impact",
+          "Top bank dividends",
+          "Insurance company analysis",
+          "Credit card company dividends",
+          "Net interest margin trends",
+          "Economic sensitivity",
+          "Dividend sustainability analysis"
+        ]
+      },
+      {
+        "id": "div_021",
+        "title": "Building a $1000/Month Dividend Income Portfolio: Step-by-Step Guide",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "1000 dollar monthly dividend income portfolio",
+        "secondary_keywords": [
+          "monthly dividend income $1000",
+          "passive income dividend strategy",
+          "dividend portfolio construction"
+        ],
+        "traffic_potential": "monthly: 1500-2100 searches",
+        "target_audience": "passive income seekers, early retirees",
+        "outline": [
+          "Capital requirement calculation",
+          "Yield targets (4%, 5%, 6%)",
+          "Portfolio size scenarios",
+          "Asset allocation framework",
+          "Monthly payment schedule",
+          "Growth vs income balance",
+          "Tax implications",
+          "Maintenance and rebalancing"
+        ]
+      },
+      {
+        "id": "div_022",
+        "title": "Dividend Growth Portfolio: Balancing Yield and Appreciation",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "dividend growth investing strategy",
+        "secondary_keywords": [
+          "dividend growth rate analysis",
+          "growing dividend portfolio",
+          "dividend appreciation stocks"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "long-term investors, growth seekers",
+        "outline": [
+          "Dividend growth definition",
+          "CAGR calculations",
+          "Future income projections",
+          "Young dividend growers",
+          "Compounding impact",
+          "Stock selection criteria",
+          "Portfolio rebalancing strategies",
+          "50+ year projections"
+        ]
+      },
+      {
+        "id": "div_023",
+        "title": "Dividend Aristocrats vs S&P 500: Long-Term Performance Comparison",
+        "content_type": "analysis",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "dividend aristocrats vs S&P 500 performance",
+        "secondary_keywords": [
+          "dividend stocks outperformance",
+          "dividend vs index returns",
+          "aristocrats total return"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "performance-focused investors, analysts",
+        "outline": [
+          "Historical performance comparison",
+          "Period-specific analysis (10yr, 20yr, 30yr)",
+          "Volatility comparison",
+          "Dividend yield component",
+          "Capital appreciation analysis",
+          "Tax-adjusted returns",
+          "Sector rotation impact",
+          "2026 outlook"
+        ]
+      },
+      {
+        "id": "div_024",
+        "title": "International Dividend Stocks: Geographic Diversification Strategy",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "low",
+        "word_count": 2700,
+        "primary_keyword": "international dividend stocks investing",
+        "secondary_keywords": [
+          "foreign dividend stocks",
+          "ADR dividend investing",
+          "global dividend portfolio"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "diversified investors, global seekers",
+        "outline": [
+          "International dividend opportunities",
+          "Tax treaty benefits",
+          "Currency risk considerations",
+          "ADR mechanics and costs",
+          "Top international dividends",
+          "Country-specific risks",
+          "Currency hedging strategies",
+          "Account structure optimization"
+        ]
+      },
+      {
+        "id": "div_025",
+        "title": "Dividend Cuts and How to Avoid Them: Red Flag Analysis",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2700,
+        "primary_keyword": "dividend cut warning signs",
+        "secondary_keywords": [
+          "dividend sustainability analysis",
+          "predict dividend cuts",
+          "dividend cut avoidance"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "conservative investors, loss avoiders",
+        "outline": [
+          "Common dividend cut triggers",
+          "Payout ratio red flags",
+          "FCF decline warnings",
+          "Debt level analysis",
+          "Industry headwind analysis",
+          "Management commentary reading",
+          "Earnings decline tracking",
+          "Early action strategies"
+        ]
+      }
+    ]
+  },
+  "affiliate_stack_guide": {
+    "current_state": {
+      "total_articles": 118,
+      "content_types": [
+        "tool reviews (60+ articles)",
+        "comparisons (30+ articles)",
+        "guides (20+ articles)",
+        "integrations (8+ articles)"
+      ],
+      "target_articles": 148,
+      "new_articles_needed": 30
+    },
+    "articles": [
+      {
+        "id": "stack_001",
+        "title": "Best SaaS Tools for Solopreneurs 2026: Essential Stack",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "best tools for solopreneurs",
+        "secondary_keywords": [
+          "solopreneur software stack",
+          "solopreneur tools list",
+          "one person company tools"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "solo entrepreneurs, freelancers",
+        "outline": [
+          "Essential categories overview",
+          "Productivity tools (Notion, Asana)",
+          "CRM for solos (HubSpot free, Salesforce)",
+          "Email marketing (ConvertKit, Mailchimp)",
+          "Financial management (Stripe, Wave)",
+          "Content creation (Canva, Grammarly)",
+          "Time tracking (Toggl, Harvest)",
+          "Total cost per month analysis"
+        ]
+      },
+      {
+        "id": "stack_002",
+        "title": "Digital Agency Tool Stack 2026: Complete Workflow Setup",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 4000,
+        "primary_keyword": "digital agency tool stack",
+        "secondary_keywords": [
+          "agency software tools",
+          "marketing agency tools",
+          "client management agency tools"
+        ],
+        "traffic_potential": "monthly: 1000-1500 searches",
+        "target_audience": "agency owners, marketing teams",
+        "outline": [
+          "Project management (Monday, Asana, Wrike)",
+          "Time tracking (Harvest, Toggl)",
+          "Client communication (Slack, Teams)",
+          "Marketing tools (HubSpot, Marketo)",
+          "Analytics (Mixpanel, Amplitude)",
+          "Invoicing (FreshBooks, Quickbooks)",
+          "Document collaboration (Google Docs, Notion)",
+          "Automation (Zapier, Make)"
+        ]
+      },
+      {
+        "id": "stack_003",
+        "title": "SaaS Founder Tech Stack: Build, Launch, and Scale",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 4000,
+        "primary_keyword": "SaaS founder tech stack 2026",
+        "secondary_keywords": [
+          "SaaS tools startup",
+          "SaaS building tools",
+          "SaaS launch tools"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "SaaS founders, startup builders",
+        "outline": [
+          "Development tools (GitHub, VS Code)",
+          "Hosting (Vercel, AWS, DigitalOcean)",
+          "Database (Supabase, Firebase)",
+          "Authentication (Auth0, Clerk)",
+          "Payment processing (Stripe)",
+          "Monitoring (Sentry, New Relic)",
+          "Analytics (Segment, Mixpanel)",
+          "Customer support (Zendesk, Intercom)"
+        ]
+      },
+      {
+        "id": "stack_004",
+        "title": "Content Creator Tool Stack: Blog, YouTube, Podcast",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "content creator tool stack",
+        "secondary_keywords": [
+          "creator economy tools",
+          "content production tools",
+          "creator software bundle"
+        ],
+        "traffic_potential": "monthly: 1500-2000 searches",
+        "target_audience": "content creators, influencers",
+        "outline": [
+          "Writing tools (Grammarly, Jasper)",
+          "Video editing (DaVinci, Premiere)",
+          "Image creation (Canva, Figma)",
+          "Scheduling (Buffer, Later)",
+          "Analytics (Google Analytics, YouTube Studio)",
+          "Audience management (ConvertKit, Substack)",
+          "Podcast tools (Riverside, Riverside.fm)",
+          "Monetization (Patreon, Gumroad)"
+        ]
+      },
+      {
+        "id": "stack_005",
+        "title": "E-Commerce Business Tool Stack: Shopify Ecosystem",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "Shopify app stack ecommerce",
+        "secondary_keywords": [
+          "ecommerce tool stack",
+          "online store tools",
+          "Shopify apps for growth"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "ecommerce entrepreneurs, Shopify store owners",
+        "outline": [
+          "Store optimization (Rebuy, Klaviyo)",
+          "Inventory management (Shopify native)",
+          "Fulfillment integration (Printful, Shippo)",
+          "Email marketing (Klaviyo, Omnisend)",
+          "Analytics (Littledata, Shopify Analytics)",
+          "Customer support (Gorgias, Zendesk)",
+          "Social selling (TikTok Shop, Instagram)",
+          "Review management (Yotpo, Judge.me)"
+        ]
+      },
+      {
+        "id": "stack_006",
+        "title": "SEO Tool Stack: Complete Keyword Research to Monitoring",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "SEO tool stack 2026",
+        "secondary_keywords": [
+          "best SEO tools bundle",
+          "SEO software stack",
+          "keyword research tools"
+        ],
+        "traffic_potential": "monthly: 1400-1900 searches",
+        "target_audience": "SEO professionals, content marketers",
+        "outline": [
+          "Keyword research (Ahrefs, SEMrush, Ubersuggest)",
+          "Site auditing (Screaming Frog, SEMrush)",
+          "Rank tracking (Semrush, AccuRanker)",
+          "Backlink analysis (Ahrefs, Majestic)",
+          "Content optimization (Surfer, MarketMuse)",
+          "SERP analysis (Semrush, Moz)",
+          "Local SEO (Google My Business, Yext)",
+          "Technical SEO (Semrush, Lighthouse)"
+        ]
+      },
+      {
+        "id": "stack_007",
+        "title": "SaaS Marketing Tool Stack: Customer Acquisition to Retention",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "SaaS marketing tool stack",
+        "secondary_keywords": [
+          "marketing automation SaaS",
+          "customer acquisition tools",
+          "SaaS growth tools"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "SaaS marketers, growth teams",
+        "outline": [
+          "CRM (HubSpot, Salesforce, Pipedrive)",
+          "Email automation (Klaviyo, ActiveCampaign)",
+          "Landing pages (Unbounce, Leadpages)",
+          "Analytics (Mixpanel, Amplitude, Segment)",
+          "Ads management (Adroll, Kenshoo)",
+          "Webinar tools (Demio, Hopin)",
+          "Community (Slack, Circle, Mighty Networks)",
+          "Analytics/BI (Looker, Tableau)"
+        ]
+      },
+      {
+        "id": "stack_008",
+        "title": "Remote Team Collaboration Tools: Complete Communication Stack",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 3200,
+        "primary_keyword": "remote team tool stack",
+        "secondary_keywords": [
+          "remote work collaboration tools",
+          "distributed team software",
+          "async communication tools"
+        ],
+        "traffic_potential": "monthly: 1100-1600 searches",
+        "target_audience": "remote managers, distributed teams",
+        "outline": [
+          "Communication (Slack, Discord, Teams)",
+          "Synchronous (Zoom, Google Meet, Loom)",
+          "Project management (Asana, Monday.com, Notion)",
+          "Document collaboration (Google Drive, Notion)",
+          "Time tracking (Harvest, Toggl, Clockify)",
+          "Async video (Loom, Wistia)",
+          "Knowledge base (Notion, Slite, Gitbook)",
+          "Hiring (Lever, Greenhouse)"
+        ]
+      },
+      {
+        "id": "stack_009",
+        "title": "AI Tool Integration: Connecting AI Tools to Your Workflow",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "AI tools workflow integration",
+        "secondary_keywords": [
+          "ChatGPT integrations",
+          "AI automation stack",
+          "AI workflow tools"
+        ],
+        "traffic_potential": "monthly: 1500-2000 searches",
+        "target_audience": "AI enthusiasts, productivity seekers",
+        "outline": [
+          "Writing AI (ChatGPT, Claude, Copilot)",
+          "Image AI (Midjourney, DALL-E, Stable Diffusion)",
+          "Video AI (Synthesia, Runway, Descript)",
+          "Automation (Zapier + AI, Make + AI)",
+          "Customer service (Intercom + AI, Zendesk + AI)",
+          "Analytics (ChatGPT plugins, SQL agents)",
+          "Brainstorming (Notion AI, Copilot)",
+          "Best practices and prompting"
+        ]
+      },
+      {
+        "id": "stack_010",
+        "title": "Low-Code/No-Code Stack: Building Without Coding",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3500,
+        "primary_keyword": "no-code tools stack 2026",
+        "secondary_keywords": [
+          "low code platform stack",
+          "no code automation",
+          "no code app builder"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "non-technical founders, citizen developers",
+        "outline": [
+          "Website builders (Webflow, Framer, Wix)",
+          "App builders (FlutterFlow, WeWeb, Bubble)",
+          "Automation (Zapier, Make, n8n)",
+          "Database (Airtable, Supabase, Firebase)",
+          "Hosting (Vercel, Netlify, Render)",
+          "Backend (Retool, API.AI, Hasura)",
+          "Analytics (Plausible, Mixpanel)",
+          "Project cost calculator"
+        ]
+      },
+      {
+        "id": "stack_011",
+        "title": "Startup Accounting Stack: Bookkeeping to Tax Optimization",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2800,
+        "primary_keyword": "startup accounting tool stack",
+        "secondary_keywords": [
+          "bookkeeping software startup",
+          "small business accounting tools",
+          "tax software stack"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "startup founders, solopreneurs",
+        "outline": [
+          "Invoicing (FreshBooks, Wave, Stripe Billing)",
+          "Bookkeeping (QuickBooks, Xero, Wave)",
+          "Expense tracking (Expensify, Divvy)",
+          "Tax software (TurboTax, TaxAct)",
+          "Payroll (Gusto, ADP, Square Payroll)",
+          "Banking (Mercury, Wise, Brex)",
+          "Receipts (Scan, Expensify)",
+          "CPA coordination"
+        ]
+      },
+      {
+        "id": "stack_012",
+        "title": "Developer Tool Stack 2026: IDEs, VCS, and DevOps",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "developer tool stack 2026",
+        "secondary_keywords": [
+          "programming tools stack",
+          "web developer tools",
+          "DevOps tool stack"
+        ],
+        "traffic_potential": "monthly: 1100-1600 searches",
+        "target_audience": "software developers, engineers",
+        "outline": [
+          "IDE comparison (VS Code, JetBrains, Sublime)",
+          "Version control (GitHub, GitLab, Bitbucket)",
+          "Database (PostgreSQL, MongoDB, Redis)",
+          "Containers (Docker, Kubernetes)",
+          "CI/CD (GitHub Actions, GitLab CI, Jenkins)",
+          "Testing (Jest, Pytest, RSpec)",
+          "Monitoring (Sentry, DataDog, New Relic)",
+          "API tools (Postman, Insomnia)"
+        ]
+      },
+      {
+        "id": "stack_013",
+        "title": "Design Tool Stack: Figma, Framer, and More 2026",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "design tool stack 2026",
+        "secondary_keywords": [
+          "design software comparison",
+          "UI/UX design tools",
+          "product design stack"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "designers, product managers",
+        "outline": [
+          "UI design (Figma, Sketch, Adobe XD)",
+          "Prototyping (Framer, Principle, Adobe XD)",
+          "Vector editing (Illustrator, Inkscape)",
+          "Photo editing (Photoshop, Photopea)",
+          "Wireframing (Balsamiq, Lucidchart)",
+          "Design tokens (Style Dictionary, Tokens Studio)",
+          "Collaboration (Figma Teams, Abstract)",
+          "Version control for design"
+        ]
+      },
+      {
+        "id": "stack_014",
+        "title": "Video Production Tool Stack: Recording to Editing",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 3200,
+        "primary_keyword": "video production tool stack",
+        "secondary_keywords": [
+          "video editing tools",
+          "video production software",
+          "screen recording tools"
+        ],
+        "traffic_potential": "monthly: 1000-1400 searches",
+        "target_audience": "video creators, content producers",
+        "outline": [
+          "Recording (Loom, ScreenFlow, OBS)",
+          "Editing (DaVinci, Premiere, Final Cut Pro)",
+          "Motion graphics (After Effects, Blender)",
+          "Subtitles (CapCut, Rev, Descript)",
+          "Thumbnails (Photoshop, Canva)",
+          "Audio (Audacity, Adobe Audition)",
+          "Stock media (Unsplash, Pexels, Shutterstock)",
+          "Rendering & optimization"
+        ]
+      },
+      {
+        "id": "stack_015",
+        "title": "Personal Productivity Stack: GTD and Note-Taking Setup",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2800,
+        "primary_keyword": "personal productivity tool stack",
+        "secondary_keywords": [
+          "GTD tools stack",
+          "note-taking app stack",
+          "personal knowledge management"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "productivity enthusiasts, knowledge workers",
+        "outline": [
+          "Note-taking (Notion, Obsidian, Roam)",
+          "Task management (Todoist, Things, OmniFocus)",
+          "Calendar (Google Calendar, Fantastical)",
+          "Reading list (Pocket, Instapaper, Reader)",
+          "Knowledge base (Obsidian, Roam, Logseq)",
+          "Habit tracking (Streaks, Habitica)",
+          "Journal (Day One, Reflectly)",
+          "Integration patterns"
+        ]
+      },
+      {
+        "id": "stack_016",
+        "title": "Workflow Automation Deep Dive: Zapier vs Make vs n8n",
+        "content_type": "comparison",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "Zapier vs Make vs n8n comparison",
+        "secondary_keywords": [
+          "workflow automation tool comparison",
+          "automation platform features",
+          "automation cost comparison"
+        ],
+        "traffic_potential": "monthly: 1000-1500 searches",
+        "target_audience": "automation enthusiasts, optimization seekers",
+        "outline": [
+          "Feature comparison matrix",
+          "Pricing breakdown (tasks/month)",
+          "Integration ecosystem size",
+          "Ease of use comparison",
+          "Automation types (Zapier vs Make vs n8n)",
+          "Use cases and scenarios",
+          "Migration path between platforms",
+          "ROI calculation examples"
+        ]
+      },
+      {
+        "id": "stack_017",
+        "title": "Customer Support Tool Stack: Ticketing to Community",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "customer support tool stack",
+        "secondary_keywords": [
+          "help desk software comparison",
+          "customer service tools",
+          "support ticket system"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "customer support teams, founders",
+        "outline": [
+          "Help desk (Zendesk, Intercom, Freshdesk)",
+          "Ticketing (GitHub Issues, Linear, Jira)",
+          "Live chat (Intercom, Drift, Crisp)",
+          "Community (Circle, Mighty Networks, Slack)",
+          "Knowledge base (Zendesk Guide, Slite)",
+          "Feedback (Canny, Nolt, Upvoty)",
+          "Analytics (Zendesk Analytics, Intercom)",
+          "Scaling strategy"
+        ]
+      },
+      {
+        "id": "stack_018",
+        "title": "Data Analytics Stack: Data Collection to Visualization",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "data analytics tool stack",
+        "secondary_keywords": [
+          "analytics platform stack",
+          "BI tool comparison",
+          "data visualization tools"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "data analysts, business intelligence teams",
+        "outline": [
+          "Data collection (Segment, Rudderstack, mParticle)",
+          "Data warehouse (Snowflake, BigQuery, Redshift)",
+          "ETL (Talend, Fivetran, Stitch)",
+          "Visualization (Tableau, Looker, Metabase)",
+          "SQL IDE (dbt, Jupyter, Mode)",
+          "Real-time analytics (Mixpanel, Amplitude)",
+          "Cost analysis",
+          "Architecture patterns"
+        ]
+      },
+      {
+        "id": "stack_019",
+        "title": "Tool Stack Optimization: Reducing Tool Sprawl and Integration",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "medium",
+        "word_count": 2600,
+        "primary_keyword": "tool stack optimization consolidation",
+        "secondary_keywords": [
+          "reduce tool sprawl",
+          "consolidate software",
+          "tool integration strategy"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "operations managers, efficiency seekers",
+        "outline": [
+          "Identifying redundancy",
+          "Consolidation opportunities",
+          "Integration benefits",
+          "Migration strategies",
+          "Training and adoption",
+          "Cost savings analysis",
+          "Measuring ROI",
+          "Quarterly review process"
+        ]
+      },
+      {
+        "id": "stack_020",
+        "title": "Budget-Conscious Tool Stack: Open Source and Free Tier Tools",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3000,
+        "primary_keyword": "free open source tool stack",
+        "secondary_keywords": [
+          "free software alternatives",
+          "open source productivity tools",
+          "bootstrap startup tools"
+        ],
+        "traffic_potential": "monthly: 1100-1600 searches",
+        "target_audience": "bootstrapped startups, budget-conscious teams",
+        "outline": [
+          "Project management (OpenProject, Plane, Focalboard)",
+          "CRM (EspoCRM, Odoo, SuiteCRM)",
+          "Accounting (GnuCash, Invoice Ninja, Odoo)",
+          "Marketing (Mautic, Ontraport, HubSpot free)",
+          "Analytics (Plausible, Fathom, Matomo)",
+          "Design (Inkscape, GIMP, Krita)",
+          "Development (VS Code, Git, Docker)",
+          "Cost comparison vs paid"
+        ]
+      }
+    ]
+  },
+  "quant_platform_content": {
+    "current_state": {
+      "total_articles": 0,
+      "focus": "Educational content for free/open beta platform",
+      "target_articles": 30,
+      "new_articles_needed": 30
+    },
+    "articles": [
+      {
+        "id": "quant_001",
+        "title": "Getting Started with Quantitative Trading: Beginner's Guide",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "easy",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "quantitative trading beginner guide",
+        "secondary_keywords": [
+          "quant trading introduction",
+          "algorithmic trading basics",
+          "systematic trading start"
+        ],
+        "traffic_potential": "monthly: 1500-2200 searches",
+        "target_audience": "beginner traders, aspiring quants",
+        "outline": [
+          "What is quantitative trading",
+          "Advantages vs disadvantages",
+          "Required skills (Python, statistics)",
+          "Hardware and software setup",
+          "First strategy ideas",
+          "Backtesting workflow",
+          "Risk management essentials",
+          "Next steps and resources"
+        ]
+      },
+      {
+        "id": "quant_002",
+        "title": "Simple Moving Average Crossover Strategy: Complete Tutorial",
+        "content_type": "tutorial",
+        "search_intent": "informational",
+        "difficulty": "easy",
+        "priority": "high",
+        "word_count": 2600,
+        "primary_keyword": "moving average crossover strategy",
+        "secondary_keywords": [
+          "SMA strategy Python",
+          "moving average trading signal",
+          "crossover trading system"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "beginner traders, Python learners",
+        "outline": [
+          "SMA concept and calculation",
+          "50/200 day crossover setup",
+          "Signal generation logic",
+          "Python implementation with code",
+          "Backtesting the strategy",
+          "Performance metrics explained",
+          "Optimization parameters",
+          "Paper trading setup"
+        ]
+      },
+      {
+        "id": "quant_003",
+        "title": "RSI Indicator Explained: Relative Strength Index Trading Strategy",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "easy",
+        "priority": "high",
+        "word_count": 2500,
+        "primary_keyword": "RSI indicator trading strategy",
+        "secondary_keywords": [
+          "relative strength index overbought",
+          "RSI divergence trading",
+          "RSI strategy Python"
+        ],
+        "traffic_potential": "monthly: 1400-1900 searches",
+        "target_audience": "technical traders, indicator enthusiasts",
+        "outline": [
+          "RSI calculation and interpretation",
+          "Overbought/oversold levels",
+          "Divergence identification",
+          "Entry and exit signals",
+          "Python implementation",
+          "Parameter optimization (14, 21, 30)",
+          "Common pitfalls",
+          "Combining with other indicators"
+        ]
+      },
+      {
+        "id": "quant_004",
+        "title": "MACD Strategy: Moving Average Convergence Divergence Trading",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "easy",
+        "priority": "high",
+        "word_count": 2500,
+        "primary_keyword": "MACD trading strategy",
+        "secondary_keywords": [
+          "MACD signal line crossover",
+          "MACD histogram strategy",
+          "MACD Python implementation"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "momentum traders, indicator users",
+        "outline": [
+          "MACD calculation (12, 26, 9)",
+          "Signal line and histogram",
+          "Crossover signals",
+          "Trend identification",
+          "Divergence patterns",
+          "Python code with TA-Lib",
+          "Backtesting results",
+          "Combining with support/resistance"
+        ]
+      },
+      {
+        "id": "quant_005",
+        "title": "Bollinger Bands Strategy: Mean Reversion Trading",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "easy",
+        "priority": "medium",
+        "word_count": 2400,
+        "primary_keyword": "Bollinger Bands trading strategy",
+        "secondary_keywords": [
+          "mean reversion Bollinger Bands",
+          "band squeeze strategy",
+          "volatility breakout trading"
+        ],
+        "traffic_potential": "monthly: 1000-1400 searches",
+        "target_audience": "mean reversion traders, volatility seekers",
+        "outline": [
+          "Bollinger Bands construction",
+          "Upper/lower band interpretation",
+          "Squeeze and expansion signals",
+          "Mean reversion trading logic",
+          "Volatility analysis",
+          "Python implementation",
+          "Backtest performance",
+          "Avoiding false breakouts"
+        ]
+      },
+      {
+        "id": "quant_006",
+        "title": "Technical Indicators Comparison: 15 Indicators Explained",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "technical indicators comparison",
+        "secondary_keywords": [
+          "technical analysis indicators list",
+          "trading indicators explained",
+          "leading vs lagging indicators"
+        ],
+        "traffic_potential": "monthly: 1300-1900 searches",
+        "target_audience": "technical analysts, traders",
+        "outline": [
+          "Trend indicators (SMA, EMA, MACD)",
+          "Momentum indicators (RSI, Stochastic, CCI)",
+          "Volatility indicators (ATR, Bollinger, Keltner)",
+          "Volume indicators (OBV, VWAP, CMF)",
+          "When to use each indicator",
+          "Indicator combinations",
+          "Avoiding indicator overload",
+          "Python library reference"
+        ]
+      },
+      {
+        "id": "quant_007",
+        "title": "Backtesting Your Trading Strategy: Complete Guide",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "backtest trading strategy guide",
+        "secondary_keywords": [
+          "backtesting methodology",
+          "backtest metrics Sharpe ratio",
+          "strategy validation"
+        ],
+        "traffic_potential": "monthly: 1200-1700 searches",
+        "target_audience": "quant traders, strategy developers",
+        "outline": [
+          "Historical data acquisition",
+          "Survivorship bias avoidance",
+          "Walk-forward analysis",
+          "Sharpe ratio and metrics",
+          "Drawdown analysis",
+          "Slippage and commissions",
+          "Out-of-sample testing",
+          "Common backtesting pitfalls"
+        ]
+      },
+      {
+        "id": "quant_008",
+        "title": "Risk Management in Trading: Position Sizing and Stop-Losses",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "trading risk management position sizing",
+        "secondary_keywords": [
+          "risk per trade calculation",
+          "stop loss strategy",
+          "position size formula"
+        ],
+        "traffic_potential": "monthly: 1100-1600 searches",
+        "target_audience": "risk-conscious traders, risk managers",
+        "outline": [
+          "Risk per trade rules (1-2%)",
+          "Kelly Criterion formula",
+          "Position sizing calculation",
+          "Stop-loss placement strategies",
+          "Profit-taking rules",
+          "Portfolio heat limits",
+          "Correlation and concentration risk",
+          "Stress testing scenarios"
+        ]
+      },
+      {
+        "id": "quant_009",
+        "title": "Machine Learning for Trading: Feature Engineering Guide",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3500,
+        "primary_keyword": "machine learning trading features",
+        "secondary_keywords": [
+          "feature engineering trading",
+          "ML trading prediction",
+          "stock price ML model"
+        ],
+        "traffic_potential": "monthly: 1000-1500 searches",
+        "target_audience": "ML engineers, quant traders",
+        "outline": [
+          "Feature categories (technical, fundamental, macro)",
+          "Feature scaling and normalization",
+          "Lag and lead features",
+          "Interaction features",
+          "Feature selection methods",
+          "Overfitting prevention",
+          "Python implementation with scikit-learn",
+          "Model validation strategies"
+        ]
+      },
+      {
+        "id": "quant_010",
+        "title": "Pair Trading Strategy: Statistical Arbitrage Tutorial",
+        "content_type": "tutorial",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 3200,
+        "primary_keyword": "pairs trading statistical arbitrage",
+        "secondary_keywords": [
+          "cointegration pairs",
+          "statistical arbitrage Python",
+          "market neutral strategy"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "advanced traders, quant researchers",
+        "outline": [
+          "Pair selection criteria",
+          "Cointegration testing (Johansen, ADF)",
+          "Spread calculation and trading",
+          "Entry and exit rules",
+          "Python implementation with statsmodels",
+          "Backtesting framework",
+          "Monitoring spread health",
+          "Risk management specifics"
+        ]
+      },
+      {
+        "id": "quant_011",
+        "title": "Mean Reversion vs Momentum: Choosing Your Trading Approach",
+        "content_type": "comparison",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "mean reversion vs momentum strategy",
+        "secondary_keywords": [
+          "mean reversion trading style",
+          "momentum trading approach",
+          "strategy style comparison"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "strategy developers, traders",
+        "outline": [
+          "Mean reversion definition and logic",
+          "Momentum definition and logic",
+          "Market condition suitability",
+          "Drawdown characteristics",
+          "Sharpe ratio comparison",
+          "Implementation complexity",
+          "Indicator preferences",
+          "Hybrid approaches"
+        ]
+      },
+      {
+        "id": "quant_012",
+        "title": "Volatility Trading Strategies: VIX and Straddle Strategies",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "volatility trading strategy VIX",
+        "secondary_keywords": [
+          "VIX trading methods",
+          "straddle options strategy",
+          "volatility arbitrage"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "options traders, volatility specialists",
+        "outline": [
+          "VIX index and meaning",
+          "Long volatility strategies",
+          "Short volatility strategies",
+          "Straddle and strangle setups",
+          "Iron Condor strategies",
+          "VIX futures trading",
+          "Volatility mean reversion",
+          "Hedging strategies"
+        ]
+      },
+      {
+        "id": "quant_013",
+        "title": "Walk-Forward Analysis: Avoiding Overfitting in Backtests",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "walk forward analysis backtesting",
+        "secondary_keywords": [
+          "out of sample testing",
+          "strategy overfitting prevention",
+          "rolling window optimization"
+        ],
+        "traffic_potential": "monthly: 600-900 searches",
+        "target_audience": "quant traders, backtesting professionals",
+        "outline": [
+          "Overfitting definition",
+          "Walk-forward mechanics",
+          "In-sample vs out-of-sample periods",
+          "Rolling optimization window",
+          "Parameter stability analysis",
+          "Out-of-sample performance expectations",
+          "Python implementation",
+          "When walk-forward is needed"
+        ]
+      },
+      {
+        "id": "quant_014",
+        "title": "Sentiment Analysis for Trading: News and Social Media Signals",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "sentiment analysis trading signals",
+        "secondary_keywords": [
+          "news sentiment trading",
+          "social media trading signals",
+          "NLP trading strategy"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "NLP enthusiasts, data-driven traders",
+        "outline": [
+          "Sentiment data sources (Twitter, Reddit, news)",
+          "Sentiment scoring methods",
+          "NLP libraries (TextBlob, transformers)",
+          "Lagging indicator issues",
+          "Combining sentiment with technicals",
+          "Backtesting sentiment signals",
+          "API integration (Twitter API, news APIs)",
+          "False positives and noise"
+        ]
+      },
+      {
+        "id": "quant_015",
+        "title": "Algorithmic Trading Systems: Building Production Infrastructure",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3500,
+        "primary_keyword": "algorithmic trading system architecture",
+        "secondary_keywords": [
+          "trading bot infrastructure",
+          "high frequency trading setup",
+          "production trading system"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "software engineers, algo traders",
+        "outline": [
+          "Strategy module architecture",
+          "Order management system (OMS)",
+          "Execution handling (fills, rejections)",
+          "Risk management module",
+          "Data pipeline (real-time feeds)",
+          "Monitoring and alerting",
+          "Broker API integration",
+          "Backtesting framework integration"
+        ]
+      },
+      {
+        "id": "quant_016",
+        "title": "Cryptocurrency Trading Strategies: Applied to Digital Assets",
+        "content_type": "guide",
+        "search_intent": "commercial",
+        "difficulty": "hard",
+        "priority": "medium",
+        "word_count": 3000,
+        "primary_keyword": "cryptocurrency trading strategies 2026",
+        "secondary_keywords": [
+          "Bitcoin trading systems",
+          "crypto quant trading",
+          "altcoin trading signals"
+        ],
+        "traffic_potential": "monthly: 1000-1400 searches",
+        "target_audience": "crypto traders, digital asset investors",
+        "outline": [
+          "Crypto market characteristics",
+          "24/7 trading implications",
+          "High volatility opportunities",
+          "DeFi strategy opportunities",
+          "Arbitrage across exchanges",
+          "Trend following in crypto",
+          "Risk management for crypto",
+          "Tax implications"
+        ]
+      },
+      {
+        "id": "quant_017",
+        "title": "Benchmark Selection: Choosing the Right Performance Comparison",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 2400,
+        "primary_keyword": "trading strategy benchmark selection",
+        "secondary_keywords": [
+          "S&P 500 benchmark comparison",
+          "appropriate benchmark selection",
+          "Sharpe ratio comparison"
+        ],
+        "traffic_potential": "monthly: 500-800 searches",
+        "target_audience": "performance evaluators, traders",
+        "outline": [
+          "Benchmark relevance importance",
+          "Market-wide benchmarks (SPY, QQQ)",
+          "Sector-specific benchmarks",
+          "Risk-adjusted benchmarks",
+          "Information ratio calculation",
+          "Alpha calculation",
+          "Multi-benchmark approach",
+          "Benchmark drift issues"
+        ]
+      },
+      {
+        "id": "quant_018",
+        "title": "Python Libraries for Quantitative Trading: Complete Toolkit",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "medium",
+        "priority": "high",
+        "word_count": 3000,
+        "primary_keyword": "Python trading libraries toolkit",
+        "secondary_keywords": [
+          "backtrader vs zipline",
+          "TA-Lib technical analysis",
+          "backtesting Python libraries"
+        ],
+        "traffic_potential": "monthly: 900-1300 searches",
+        "target_audience": "Python developers, traders",
+        "outline": [
+          "Data libraries (pandas, yfinance, pandas_datareader)",
+          "Backtesting (backtrader, zipline, VectorBT)",
+          "Technical analysis (TA-Lib, pandas_ta)",
+          "Machine learning (scikit-learn, XGBoost, TensorFlow)",
+          "Statistics (scipy, statsmodels)",
+          "Visualization (matplotlib, plotly)",
+          "Broker APIs (alpaca, Interactive Brokers)",
+          "Comparison matrix"
+        ]
+      },
+      {
+        "id": "quant_019",
+        "title": "Strategy Optimization: Parameter Tuning and Grid Search",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 2800,
+        "primary_keyword": "trading strategy parameter optimization",
+        "secondary_keywords": [
+          "grid search trading strategy",
+          "strategy tuning methodology",
+          "hyperparameter optimization"
+        ],
+        "traffic_potential": "monthly: 700-1100 searches",
+        "target_audience": "strategy developers, optimization enthusiasts",
+        "outline": [
+          "Parameter optimization types",
+          "Grid search methodology",
+          "Random search approach",
+          "Bayesian optimization",
+          "Overfitting during optimization",
+          "Stability analysis",
+          "Sensitivity analysis",
+          "Python implementation examples"
+        ]
+      },
+      {
+        "id": "quant_020",
+        "title": "Live Trading vs Backtesting: Bridging the Gap",
+        "content_type": "guide",
+        "search_intent": "informational",
+        "difficulty": "hard",
+        "priority": "high",
+        "word_count": 2700,
+        "primary_keyword": "live trading vs backtesting reality",
+        "secondary_keywords": [
+          "backtest to live trading transition",
+          "slippage and commissions impact",
+          "real-world trading challenges"
+        ],
+        "traffic_potential": "monthly: 800-1200 searches",
+        "target_audience": "live traders, strategy deployers",
+        "outline": [
+          "Reality gap explanation",
+          "Slippage modeling and impact",
+          "Commission and fee structures",
+          "Liquidity constraints in live trading",
+          "Latency and execution issues",
+          "Market impact for large orders",
+          "Stress testing with realistic constraints",
+          "Expectation management"
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "total_articles_by_site": {
+      "credit_card": {
+        "current": 103,
+        "new_articles": 32,
+        "target": 135,
+        "focus": "Card stacking, tax strategies, credit building, negotiation tactics"
+      },
+      "dividend_calculator": {
+        "current": 79,
+        "new_articles": 25,
+        "target": 104,
+        "focus": "Sector strategies, international dividends, portfolio construction"
+      },
+      "affiliate_stack_guide": {
+        "current": 118,
+        "new_articles": 20,
+        "target": 138,
+        "focus": "Tool stacks by use case, workflow integrations, implementation guides"
+      },
+      "quant_platform": {
+        "current": 0,
+        "new_articles": 20,
+        "target": 20,
+        "focus": "Beginner strategies, indicators, risk management, ML applications"
+      }
+    },
+    "content_strategy": {
+      "high_priority_topics": 45,
+      "medium_priority_topics": 35,
+      "low_priority_topics": 10,
+      "total_priority_articles": 90,
+      "total_additional_ideas": 70
+    },
+    "keyword_research_focus": [
+      "Long-tail keywords (3-5 words)",
+      "User pain points (how-to, comparison, analysis)",
+      "Seasonal opportunities",
+      "Emerging trends in fintech and SaaS",
+      "Transaction keywords for affiliate monetization"
+    ],
+    "implementation_timeline": {
+      "phase_1": "Weeks 1-2: Create 20 high-priority articles across all 4 sites",
+      "phase_2": "Weeks 3-4: Create 20 medium-priority articles",
+      "phase_3": "Weeks 5-8: Create remaining 30+ articles",
+      "phase_4": "Ongoing: Update and optimize based on Google Analytics data",
+      "estimated_content_value": "$15,000-25,000 USD if outsourced"
+    }
+  }
+}
