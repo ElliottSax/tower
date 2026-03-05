@@ -1,0 +1,32 @@
+{
+  "high_ranking_actions": [
+    "Create internal links from homepage",
+    "Link from category pages",
+    "Create follow-up related article",
+    "Update article with new 2026 data"
+  ],
+  "mid_ranking_actions": [
+    "Expand article (add 500+ words)",
+    "Add more relevant keywords",
+    "Improve title/meta for CTR",
+    "Add expert quotes or data"
+  ],
+  "low_ranking_actions": [
+    "Rewrite title (test 3-5 versions)",
+    "Improve meta description (CTR focus)",
+    "Complete site rebuild if old content",
+    "Consider content consolidation"
+  ],
+  "low_ctr_actions": [
+    "Add power words to title",
+    "Include numbers/data in meta",
+    "Use question format in title",
+    "A/B test titles via GSC"
+  ],
+  "new_article_actions": [
+    "Internal link from category page",
+    "Link from related articles",
+    "Share on social media",
+    "Wait 2-4 weeks for indexing"
+  ]
+}

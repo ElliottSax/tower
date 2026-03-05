@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-03-05T16:11:37.653413",
+  "total_articles": 439,
+  "total_pageviews": 0,
+  "total_clicks": 0,
+  "total_email_signups": 0,
+  "total_affiliate_revenue": 0.0,
+  "by_site": {
+    "credit": {
+      "total_articles": 120,
+      "total_pageviews": 0,
+      "total_clicks": 0,
+      "total_email_signups": 0,
+      "total_affiliate_clicks": 0,
+      "total_revenue": 0.0,
+      "avg_position": 0.0,
+      "avg_bounce_rate": 0.0
+    },
+    "calc": {
+      "total_articles": 98,
+      "total_pageviews": 0,
+      "total_clicks": 0,
+      "total_email_signups": 0,
+      "total_affiliate_clicks": 0,
+      "total_revenue": 0.0,
+      "avg_position": 0.0,
+      "avg_bounce_rate": 0.0
+    },
+    "affiliate": {
+      "total_articles": 142,
+      "total_pageviews": 0,
+      "total_clicks": 0,
+      "total_email_signups": 0,
+      "total_affiliate_clicks": 0,
+      "total_revenue": 0.0,
+      "avg_position": 0.0,
+      "avg_bounce_rate": 0.0
+    },
+    "quant": {
+      "total_articles": 79,
+      "total_pageviews": 0,
+      "total_clicks": 0,
+      "total_email_signups": 0,
+      "total_affiliate_clicks": 0,
+      "total_revenue": 0.0,
+      "avg_position": 0.0,
+      "avg_bounce_rate": 0.0
+    }
+  }
+}

@@ -1,0 +1,49 @@
+
+name: Google Search Console Daily Data Collection
+
+on:
+  schedule:
+    # Run 30 minutes after sitemap submission (2:30 AM UTC)
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  collect-gsc-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install google-auth google-auth-httplib2 google-auth-oauthlib requests
+
+      - name: Collect GSC ranking data
+        env:
+          GCP_SERVICE_ACCOUNT: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+        run: |
+          python gsc_data_integration.py --collect-data
+
+      - name: Generate ranking report
+        run: |
+          python gsc_data_integration.py --generate-report
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "Content Monitoring Bot"
+          git config user.email "bot@content-engine.local"
+          git add content-monitoring-data/gsc/ 2>/dev/null || true
+          git commit -m "data(gsc): Daily GSC ranking data update" || echo "No changes to commit"
+          git push origin master || git push origin main
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "⚠️ GSC data collection failed. Check GitHub Actions logs."
