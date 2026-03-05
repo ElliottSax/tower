@@ -1,1 +1,0 @@
-"""Animation Pipeline Tests."""
